@@ -1,0 +1,461 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_zYpPrW": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@500&display=swap\" rel=\"stylesheet\">\n    <style>\n        .rating {\n            font-size: 16px; \/* Increased to 16px *\/\n            display: inline-block;\n            unicode-bidi: bidi-override;\n            color: #c5c5c5;\n            position: relative;\n            margin-top: -10px;\n            margin-bottom: -10px;\n            font-family: 'Work Sans', sans-serif;\n            font-weight: 500;\n            text-align: left; \n        }\n\n        .rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .half-rating {\n            display: block;\n            position: absolute;\n            top: 0;\n            left: 0;\n            white-space: nowrap;\n            overflow: hidden;\n            width: 90%; \/* Adjust this width to reflect the appropriate star rating *\/\n            color: #000000; \n            font-family: \"Work Sans\", sans-serif;\n        }\n\n        .half-rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .reviews {\n            font-family: \"Work Sans\", sans-serif;\n            font-weight: 500;\n            text-align: left; \n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"rating\">\n        <div class=\"half-rating\"><\/div>\n    <\/div>\n    <span class=\"reviews\"><strong>Rated 4.9\/5<\/strong> based on <strong>76<\/strong> reviews<\/span>\n<\/body>\n<\/html>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "custom_dBL6bL": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: 0; margin-bottom: -5px;\">\n    <svg width=\"16px\" height=\"16px\" viewBox=\"0 0 16 16\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" fill=\"#000000\" style=\"margin-right: 8px;\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.61 3l5.74 1.53L15 5v6.74l-.37.48-6.13 1.69-6.14-1.69-.36-.48V5l.61-.47L8.34 3h.27zm-.09 1l-4 1 .55.2 3.43.9 3-.81.95-.29-3.93-1zM3 11.36l5 1.37V7L3 5.66v5.7zM9 7v5.73l5-1.37V5.63l-2.02.553V8.75l-1 .26V6.457L9 7z\"\/><\/svg>\n    <span>Best Seller | Low Stock<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_BWgUyz": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.available %}\n\n  <div class=\"instock-pulse\" style=\"justify-content: left; font-family: 'Work Sans', sans-serif; font-weight: 500; text-align: left; margin-top: -20px; margin-bottom: 50px;\"> \n    <span class=\"icon--pulsing\"><\/span>\n    <span>In stock, ready to ship<\/span>\n  <\/div>\n\n  <style>\n\n    .instock-pulse {\n      display: flex;\n      flex-wrap: nowrap;\n      align-items: center;\n      justify-content: left; \/* Align items horizontally in the center *\/\n    }\n\n    .icon--pulsing {\n      position: relative;\n      width: 20px;\n      height: 20px;\n      margin-right: 2px;\n    }\n\n    .icon--pulsing:after, \n    .icon--pulsing:before {\n        background: #54c63a;\n        width: 10px;\n        height: 10px;\n        border-radius: 10px;\n        position: absolute;\n        left: 50%; \/* Center the dot horizontally *\/\n        top: 50%; \/* Center the dot vertically *\/\n        transform: translate(-50%, -50%); \/* Offset the dot by half its size *\/\n        content: \"\";\n    }\n\n    @keyframes inventory-pulse {\n      0%{\n        opacity:0.5;\n      }\n      to{\n        transform:scale(2.5);\n        opacity:0;\n      }\n    }\n\n  <\/style>\n\n{% endif %}"
+          }
+        },
+        "size_chart_gEJL7N": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "general-sizing-guide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "custom_hqnUQg": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: -40px; margin-bottom: -10px; margin-left: 5px;\">\n    <svg width=\"10px\" height=\"10px\" viewBox=\"0 0 10 10\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" style=\"margin-right: 4px; vertical-align: middle;\">\n      <circle cx=\"5\" cy=\"5\" r=\"5\" fill=\"#DE1515\"><\/circle>\n    <\/svg>\n    <span style=\"color: #DE1515;\">Only 3 left at this price<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_PVB4AM": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Size Guide<\/title>\n    <link href=\"https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n    <style>\n        @import url('https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@400;500;600&display=swap');\n\n        .info-container {\n            display: flex;\n            justify-content: flex-start;\n            align-items: center;\n            gap: 12px;\n            margin: 10px 0 -10px; \/* Reduced top margin from 20px to 10px *\/\n            font-family: 'Work Sans', sans-serif;\n        }\n\n        .info-icon {\n            max-width: 24px;\n            width: 100%;\n            margin-top: -2px;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            border-radius: 22px;\n        }\n\n        .info-text {\n            color: #555;\n            line-height: 16px;\n            text-align: left; \/* Align the text to the left *\/\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"info-container\">\n        <img class=\"info-icon\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0027\/8134\/7953\/files\/shield.svg?v=1700063933\">\n        <span class=\"info-text\"><b>Not sure about your size?<\/b> Try a few on at home with free exchanges<\/span>\n    <\/div>\n<\/body>\n<\/html>"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "BEST SELLER | LOW STOCK"
+          }
+        },
+        "inventory_status_JG4TE6": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
+          }
+        },
+        "custom_BnJ9P6": {
+          "type": "custom",
+          "settings": {
+            "code": "<div style=\"background-color: #d7d5d3; color: #000; padding: 5px; text-align: center;\">\n  <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0821\/7283\/8235\/files\/sale_13344.png?v=1712496787\" alt=\"Sale Icon\" style=\"width: 25px; height: 25px; margin-bottom: 10px;\">\n  <h2>Buy 2, Get 1 FREE<\/h2>\n  <p>Add at least 3 dresses to your cart to get the 3rd one for free.<\/p>\n<\/div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "custom_8FjTgi": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@400;500&display=swap\" rel=\"stylesheet\">\n    <style>\n        .tabbed-container {\n            font-family: 'Work Sans', sans-serif;\n            width: 100%;\n            margin-top: 20px;\n        }\n        .tab-links {\n            display: flex;\n            justify-content: start;\n            border-bottom: 2px solid #ccc;\n        }\n        .tab-link {\n            background: none;\n            border: none;\n            outline: none;\n            cursor: pointer;\n            padding: 10px 20px;\n            transition: background-color 0.3s;\n            font-size: 16px;\n            color: #333;\n            border-bottom: 2px solid transparent;\n            margin-bottom: -2px;\n        }\n        .tab-link:hover {\n            background-color: #ddd;\n        }\n        .tab-link.active {\n            font-weight: bold;\n            border-bottom: 2px solid black;\n        }\n        .tab-content {\n            display: none;\n            padding: 20px;\n            text-align: left;\n        }\n        .tab-content p {\n            margin: 0;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"tabbed-container\">\n        <!-- Tab Links -->\n        <div class=\"tab-links\">\n            <button class=\"tab-link active\" onclick=\"openTab(event, 'description')\">Product Details<\/button>\n            <button class=\"tab-link\" onclick=\"openTab(event, 'shipping')\">Shipping & Returns<\/button>\n            <button class=\"tab-link\" onclick=\"openTab(event, 'material')\">Material + Care<\/button>\n        <\/div>\n\n        <!-- Tab Content -->\n        <div id=\"description\" class=\"tab-content\" style=\"display: block;\">\n            <p>Featuring a strapless neckline, ruched waist, and layered, flowy skirt, the Crystal Backless Tube Dress is ideal for enhancing any evening look.<\/p>\n            <ul style=\"margin-top: 10px;\">\n                <li>Strapless Neckline<\/li>\n                <li>Ruched Waist<\/li>\n                <li>Layered, Flowy Skirt<\/li>\n                <li>Double-lined, stretchy fabric<\/li>\n            <\/ul>\n            <p>Crystal's height is 5'3\" and she wears a US size XS.<\/p>\n        <\/div>\n\n        <div id=\"shipping\" class=\"tab-content\">\n            <p><strong>Shipping:<\/strong><\/p>\n            <p style=\"margin-left: 20px;\">Please allow 1-2 business days for processing and an additional 6-10 days for shipping, tracking number provided.<\/p>\n            <p style=\"margin-left: 20px;\">We offer Priority Shipping for $3 (7-10 Days) and Priority Expedited Shipping for $5 (5-7 Days).<\/p>\n            <p style=\"margin-left: 20px;\">Free Standard Shipping on orders over $60.<\/p>\n            <p style=\"margin-top: 20px;\"><strong>Returns:<\/strong><\/p>\n            <p style=\"margin-left: 20px;\">If you're not completely satisfied with your purchase, we're here to help. Returns are accepted within 30 days of delivery for a full refund.<\/p>\n        <\/div>\n\n         <div id=\"material\" class=\"tab-content\">\n            <p><strong>Material:<\/strong><\/p>\n            <ul>\n                <li>65% Cotton<\/li>\n                <li>35% Polyester<\/li>\n            <\/ul>\n            <p><strong>Care:<\/strong> Hand wash only.<\/p>\n        <\/div>\n    <\/div>\n\n    <script>\n        function openTab(evt, tabName) {\n            var i, tabcontent, tablinks;\n            tabcontent = document.getElementsByClassName(\"tab-content\");\n            for (i = 0; i < tabcontent.length; i++) {\n                tabcontent[i].style.display = \"none\";\n            }\n            tablinks = document.getElementsByClassName(\"tab-link\");\n            for (i = 0; i < tablinks.length; i++) {\n                tablinks[i].className = tablinks[i].className.replace(\" active\", \"\");\n            }\n            document.getElementById(tabName).style.display = \"block\";\n            evt.currentTarget.className += \" active\";\n        }\n    <\/script>\n<\/body>\n<\/html>"
+          }
+        },
+        "tab_tQqpmn": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Product Details",
+            "content": "<p>Get ready to glow up with the Diana Maxi – the ultimate snatching dress for slaying your formal game. With its sweeping A-line cut, playful side split, and sultry cowl neck, this dress is a whole vibe. The delicate straps lace up to reveal a daring backless look!<\/p><ul><li>A-line silhouette<\/li><li>High side split<\/li><li>Snatched design<\/li><li>Sultry cowl neck<\/li><li>Backless strap design<\/li><li>Shimmer-ready look<\/li><li>Maxi Length<\/li><\/ul><p>Jessica is 5'3\" and wears a US-size XXS.<\/p>",
+            "page": ""
+          }
+        },
+        "tab_JmcbHn": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Material + Care",
+            "content": "<p><strong>Material:<\/strong><\/p><ul><li>65% Cotton <\/li><li>35% Polyester<\/li><\/ul><p><strong>NOTE:<\/strong> It is recommended to size up to ensure the proper fit.<\/p><p><strong>Care:<\/strong><\/p><p>Machine wash cold on a gentle cycle with a mild detergent, and hang dry to keep it looking fresh. Iron on low heat if necessary, avoiding direct contact with the fabric.<\/p>",
+            "page": ""
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping + Returns",
+            "content": "<p><strong>Shipping:<br\/><\/strong>Your order will be shipped within 6-9 days, depending on the shipping option you select. Processing takes 1-3 business days during normal hours.<\/p><p>Tracking numbers are provided instantly, ensuring you can monitor your order every step of the way. <\/p><p><strong>NOTE:<\/strong> During times of high demand, please allow up to 14 days for processing and shipping.  <br\/><br\/><strong>Returns:<br\/><\/strong>We are happy to take back the product and issue you a full refund of your purchase. We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_zYpPrW",
+        "price",
+        "separator",
+        "custom_dBL6bL",
+        "custom_BWgUyz",
+        "size_chart_gEJL7N",
+        "variant_picker",
+        "custom_hqnUQg",
+        "custom_PVB4AM",
+        "sales_point",
+        "inventory_status_JG4TE6",
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e",
+        "buy_buttons",
+        "custom_BnJ9P6",
+        "description",
+        "custom_8FjTgi",
+        "tab_tQqpmn",
+        "tab_JmcbHn",
+        "tab"
+      ],
+      "custom_css": [
+        ".collapsible-content {font-family: \"Work Sans\", sans-serif;}",
+        ".size-title {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__label {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__label {margin-top: 10px;}",
+        ".product__price-savings {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {text-align: left;}",
+        ".product__price--compare {text-align: left;}",
+        ".product__price-savings {text-align: left;}",
+        ".variant-wrapper {text-align: left;}"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": false,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_content_9EAXJQ": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_6jfjKm": {
+          "type": "liquid",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Carousel<\/title>\n    <link rel=\"stylesheet\" href=\"https:\/\/cdn.jsdelivr.net\/npm\/swiper\/swiper-bundle.min.css\"\/>\n    <style>\n        body, html {\n            margin: 0;\n            padding: 0;\n            background: #fff;\n        }\n        .swiper {\n            width: 100%;\n            height: auto;\n            margin-top: 20px;\n        }\n        .swiper-slide {\n            text-align: center;\n            background: #fff;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n        }\n        .image-container {\n            width: 300px; \/* Adjust this value to change image size *\/\n            height: auto;\n        }\n        img {\n            width: 100%;\n            height: auto;\n        }\n        .swiper-button-prev, .swiper-button-next {\n            color: #000;\n            width: 30px;\n            height: 30px;\n            position: absolute;\n            top: 50%;\n            transform: translateY(-50%);\n            background-size: 50%; \/* Makes SVG icon smaller *\/\n            background-position: center;\n            background-repeat: no-repeat;\n        }\n        .swiper-button-prev {\n            left: 10px;\n            background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/arrow.png?v=1716830399');\n        }\n        .swiper-button-next {\n            right: 10px;\n            background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/arrowright.png?v=1716830399');\n        }\n        .swiper-pagination-bullet {\n            background: #999; \/* Non-active dot color *\/\n            opacity: 1;\n        }\n        .swiper-pagination-bullet-active {\n            background: #000; \/* Active dot color *\/\n        }\n        .swiper-pagination {\n            position: relative;\n            text-align: center;\n            margin-top: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div style=\"text-align:center; padding:20px;\">\n        <h2>As Styled By You<\/h2>\n        <p>See how real customers have styled our crystal dress.<\/p>\n    <\/div>\n    <div class=\"swiper\">\n        <div class=\"swiper-wrapper\">\n            <div class=\"swiper-slide\">\n                <div class=\"image-container\">\n                    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/401259651_1015077989759414_7205564194661953900_n.jpg?v=1717453068\">\n                <\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"image-container\">\n                    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/403009909_6765043363542715_9077388664977253389_n.jpg?v=1717453467\">\n                <\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"image-container\">\n                    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/412117726_6910593615683425_2726899281651892685_n.jpg?v=1717453466\">\n                <\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"image-container\">\n                    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/397070081_224660693803918_8371153531768982183_n.jpg?v=1717454086\">\n                <\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"image-container\">\n                    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/424971976_358218840326417_4583233342808069662_n.jpg?v=1717454086\">\n                <\/div>\n            <\/div>\n        <\/div>\n        <div class=\"swiper-button-prev\"><\/div>\n        <div class=\"swiper-button-next\"><\/div>\n        <div class=\"swiper-pagination\"><\/div>\n    <\/div>\n\n    <script src=\"https:\/\/cdn.jsdelivr.net\/npm\/swiper\/swiper-bundle.min.js\"><\/script>\n    <script>\n        document.addEventListener('DOMContentLoaded', function() {\n            const swiper = new Swiper('.swiper', {\n                speed: 300,\n                loop: true,\n                pagination: {\n                    el: '.swiper-pagination',\n                    type: 'bullets',\n                    clickable: true\n                },\n                navigation: {\n                    nextEl: '.swiper-button-next',\n                    prevEl: '.swiper-button-prev',\n                },\n                breakpoints: {\n                    1024: {\n                        slidesPerView: 3,\n                        spaceBetween: 30,\n                        autoplay: {\n                            delay: 2500,\n                            disableOnInteraction: false,\n                        },\n                    }\n                }\n            });\n        });\n    <\/script>\n<\/body>\n<\/html>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_6jfjKm"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"This dress is so cute & came as pictured! It’s great! Nice material and got lots of compliments. &lt;3\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled-2_69.png",
+            "author": "- Crystal S.",
+            "author_info": ""
+          }
+        },
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"I'm in love i have 6 color's in the Crystal Dress beautiful fit around my body is perfect. I'm in love!!!!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled-2_70.png",
+            "author": "- Nina J.",
+            "author_info": ""
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Such a comfy and flattering dress!! So easy to wear casually or dress up! I got the yellow and black!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled-2_71.png",
+            "author": "- Jasmine C.",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-1",
+        "testimonials-0",
+        "testimonials-2"
+      ],
+      "custom_css": [
+        ".testimonials-slider__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Don't Just Take Our Word For It",
+        "align_text": "center",
+        "round_images": false,
+        "color_background": "#ffffff",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "background_image_text_yUhLFL": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "The Star of the Show",
+        "text": "<p>The Forbidden Pocket Shorts offer a <strong>defining lift <\/strong>that contours your <strong>silhouette <\/strong>similar to a <strong>BBL without the pain<\/strong>, ensuring <strong>admiring glances<\/strong> with every step you take.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "focal_point": "bottom",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true
+      }
+    },
+    "text_and_image_QyQjTn": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Montserrat\", sans-serif;}"
+      ],
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "The Star of the Show",
+        "text": "<p>The Forbidden Pocket Shorts offer a <strong>defining lift <\/strong>that contours your <strong>silhouette <\/strong>similar to a <strong>BBL without the pain<\/strong>, ensuring <strong>admiring glances<\/strong> with every step you take.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_EmcK4m": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Montserrat\", sans-serif;}"
+      ],
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Irresistible Magnet",
+        "text": "<p><strong>Soft<\/strong>, <strong>stretchy<\/strong>, and <strong>utterly comfortable<\/strong>, they'll make you feel and look like an <strong>11 out of 10<\/strong>. <strong>Attraction <\/strong>has NEVER been this <strong>easy<\/strong>!<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_WkkqqT": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TikTok_Social_Proof_V_1.0.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Loved By Thousands",
+        "text": "<p>Thousands of customers adore our Diana Maxi Dress, making it a highlight at any event. Versatile at upscale events and casual meet-ups, earning praise for elegance and adaptability.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faq_3eTrjQ": {
+      "type": "faq",
+      "blocks": {
+        "question_Wd4DcB": {
+          "type": "question",
+          "settings": {
+            "title": "Should I size up?",
+            "text": "<p>Yes, it is recommended to size up to ensure maximum comfort.<\/p>"
+          }
+        },
+        "question_NHX4NL": {
+          "type": "question",
+          "settings": {
+            "title": "How do I wash it?",
+            "text": "<p>Machine wash cold on a gentle cycle with a mild detergent, and hang dry to keep it looking fresh. Iron on low heat if necessary, avoiding direct contact with the fabric.<\/p>"
+          }
+        },
+        "question_pd9xwa": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return it if I don't like it?",
+            "text": "<p>Absolutely, you can return your purchase for a full refund. Our policy allows for returns within 30 days of receipt. For detailed information and to initiate your return, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">refund policy<\/a> page.<\/p>"
+          }
+        },
+        "question_NKckyE": {
+          "type": "question",
+          "settings": {
+            "title": "Any further questions?",
+            "text": "<p>Please visit our <a href=\"\/pages\/contact\" title=\"Contact Us\">Contact Us<\/a> page and fill out the form at the bottom of the page. Thank you!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_Wd4DcB",
+        "question_NHX4NL",
+        "question_pd9xwa",
+        "question_NKckyE"
+      ],
+      "custom_css": [
+        ".collapsible-content__inner {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Questions? We got you covered"
+      }
+    },
+    "1713032632132ea70f": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_fRnNxi": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_fRnNxi"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "featured_collection_gACdhG": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Pairs Well With",
+        "home_featured_products": "crystal-pairs",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 2
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_content_9EAXJQ",
+    "testimonials",
+    "background_image_text_yUhLFL",
+    "text_and_image_QyQjTn",
+    "text_and_image_EmcK4m",
+    "text_and_image_WkkqqT",
+    "loox-product-reviews-app-section",
+    "faq_3eTrjQ",
+    "1713032632132ea70f",
+    "featured_collection_gACdhG",
+    "product-recommendations",
+    "collection-return",
+    "recently-viewed",
+    "sub"
+  ]
+}

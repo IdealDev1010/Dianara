@@ -1,0 +1,432 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_zYpPrW": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <link href=\"https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@500&display=swap\" rel=\"stylesheet\">\n    <style>\n        .rating {\n            font-size: 24px;\n            display: inline-block;\n            unicode-bidi: bidi-override;\n            color: #c5c5c5;\n            position: relative;\n            margin-top: -10px;\n            margin-bottom: -10px;\n             font-family: 'Work Sans', sans-serif;\n            font-weight: 500;\n            text-align: left; \n        }\n\n        .rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .half-rating {\n            display: block;\n            position: absolute;\n            top: 0;\n            left: 0;\n            white-space: nowrap;\n            overflow: hidden;\n            width: 90%; \n            color: #000000; \n            font-family: \"Work Sans\", sans-serif;\n        }\n\n        .half-rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .reviews {\n            font-family: \"Work Sans\", sans-serif;\n            font-weight: 500; \n            text-align: left; \n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"rating\">\n        <div class=\"half-rating\"><\/div>\n    <\/div>\n    <span class=\"reviews\"><strong>Rated 4.8\/5<\/strong> Based on <strong>74<\/strong> Reviews<\/span>\n<\/body>\n<\/html>"
+          }
+        },
+        "custom_mUQgBJ": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<style>\n*,\n*:before,\n*:after {\n    box-sizing: border-box!important;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n \nimg:-moz-loading {\n    visibility: hidden;\n}\n \n@supports (padding: max(0px)) {}\n \n@supports (padding: max(0px)) {}\n \n@supports (padding: max(0px)) {}\n \n@supports not (scale: 1) {}\n \n.breadcrumb__link:not([aria-current=page]):not(:hover) {\n    opacity: .7;\n}\n \n@supports (aspect-ratio: 1 \/ 1) {}\n \n@supports (scale: 0) {}\n \n@supports (padding: max(0px)) {}\n \n:focus-within~.input__label {\n    transform: scale(.733) translateY(calc(-24px - .5em)) translate(3.665px);\n}\n \n@media screen and (pointer: fine) {\n    @supports (color: color-contrast(wheat vs black, white)) and (color: rgb(from wheat r g b \/ .07)) {}\n}\n \n@supports (padding: max(0px)) {}\n \n@supports (padding: max(0px)) {}\n \n.color-swatch__radio:focus-visible+label,\n.block-swatch__radio:focus-visible+label,\n.variant-swatch__radio:focus-visible+label {\n    outline: auto 5px -webkit-focus-ring-color;\n}\n \n@supports not (aspect-ratio: 1) {}\n \n@media screen and (min-width: 1000px) {}\n \n@media screen and (max-width: 740px) {\n    @supports (padding: max(0px)) {}\n}\n \n@media screen and (max-width: 740px) {\n    @supports (padding: max(0px)) {}\n}\n \n@media screen and (max-width: 740px) {\n    @supports (padding: max(0px)) {}\n}\n \n@supports (--css: variables) {}\n \n@supports (-webkit-touch-callout: none) {}\n \n@media screen and (min-width: 1000px) {\n    @supports (height: min(1px, 2px)) {}\n}\n \n@media screen and (min-width: 1000px) {\n    @supports (width: max(1px, 2px)) {}\n}\n \n@supports (min-height: 100svh) {}\n \n@supports (width: max(1px, 2px)) {}\n \n@media screen and (min-width: 1000px) {\n    @supports (width: max(1px, 2px)) {}\n}\n \n.ms-social-proof-inner {\n    display: flex;\n    -webkit-box-align: center;\n    align-items: center;\n    margin-bottom: 16px;\n    border-bottom: 1px solid rgb(var(--border-color));\n    padding-bottom: 16px;\n}\n \n.ms-social-proof-photos {\n    display: inline-flex;\n    -webkit-box-align: center;\n    align-items: center;\n    margin-right: 8px;\n}\n \n.ms-social-proof-photo {\n    overflow: hidden;\n    position: relative;\n    width: 24px;\n    height: 24px;\n    border-radius: 50%;\n    min-width: 24px;\n    box-shadow: #fff 0 0 0 2px;\n    background: rgb(239, 239, 239);\n}\n \n.ms-social-proof-photo-inner {\n    box-sizing: border-box;\n    display: block;\n    overflow: hidden;\n    width: initial;\n    height: initial;\n    background: none;\n    opacity: 1;\n    border: 0px;\n    margin: 0;\n    padding: 0;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n}\n \n.ms-social-proof-photo-inner img {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    padding: 0;\n    border: none;\n    margin: auto;\n    display: block;\n    width: 0px;\n    height: 0px;\n    min-width: 100%;\n    max-width: 100%;\n    min-height: 100%;\n    max-height: 100%;\n    object-fit: cover;\n    vertical-align: middle;\n}\n \n.ms-social-proof-photos .ms-social-proof-photo:not(:first-child) {\n    margin-left: -4px;\n}\n \n.ms-social-proof-text {\n    letter-spacing: -.2px;\n    font-weight: 400;\n    font-size: 14px;\n    color: #000;\n    display: inline-block;\n    line-height: 16px;\n}\n \n.ms-social-proof-text-inner {\n    display: inline-flex;\n    -webkit-box-align: center;\n    align-items: center;\n    font-weight: 700;\n    color: #4a4754;\n    margin-right: 3px;\n}\n \n.ms-social-proof-text-icon {\n    margin-left: 5px;\n    position: relative;\n}\n \n \n\/* ---------------------------------------------------------------------\n * https:\/\/glimora.de\/cdn\/shop\/t\/21\/assets\/component-accordion.css?v=180480585918437927661696027934 \n * --------------------------------------------------------------------- \n *\/\n \n:root {\n    --font-heading-scale: .8;\n    --color-foreground: 0, 0, 0;\n}\n \n \n\/* ---------------------------------------------------------------------\n * https:\/\/glimora.de\/cdn\/shop\/t\/21\/assets\/component-rte.css?v=41899059571712173801696021731 \n * --------------------------------------------------------------------- \n *\/\n \n:root {\n    --color-base-text: 0, 0, 0;\n    --color-base-solid-button-labels: 0, 0, 0;\n    --color-base-accent-2: 247, 174, 166;\n}\n<\/style>\n<div class=\"ms-social-proof-inner\">\n    <div class=\"ms-social-proof-photos\">\n      <div class=\"ms-social-proof-photo\">\n        <span class=\"ms-social-proof-photo-inner\">\n          <img src=\"\/\/glimora.de\/cdn\/shop\/files\/368573416_190581457357322_737000392089457724_n.jpg?v=1696070338\">\n        <\/span>\n      <\/div>\n      <div class=\"ms-social-proof-photo\">\n        <span class=\"ms-social-proof-photo-inner\">\n          <img src=\"\/\/glimora.de\/cdn\/shop\/files\/abc.png?v=1685099925\">\n        <\/span>\n      <\/div>\n    <\/div>\n \n    <span class=\"ms-social-proof-text\">\n      <span class=\"ms-social-proof-text-inner\">\n        chaniitk, _dieLuisaugc_ \n        <span class=\"ms-social-proof-text-icon\">\n          <svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n            <path d=\"M11.36 5.17499L10.44 4.43499C10.3662 4.37611 10.309 4.29907 10.274 4.21142C10.2389 4.12377 10.2272 4.02852 10.24 3.93499L10.365 2.76499C10.3824 2.60953 10.3646 2.45215 10.313 2.30447C10.2615 2.15678 10.1774 2.02256 10.067 1.91171C9.95663 1.80086 9.82278 1.7162 9.67532 1.66398C9.52786 1.61176 9.37056 1.59331 9.21502 1.60999L8.04002 1.73499C7.94649 1.74781 7.85124 1.73612 7.76359 1.70106C7.67594 1.666 7.5989 1.60878 7.54002 1.53499L6.81502 0.629993C6.71364 0.513399 6.58843 0.419915 6.44783 0.355851C6.30723 0.291787 6.15452 0.258636 6.00002 0.258636C5.84552 0.258636 5.69281 0.291787 5.55221 0.355851C5.41161 0.419915 5.2864 0.513399 5.18502 0.629993L4.44502 1.54999C4.38614 1.62378 4.3091 1.681 4.22145 1.71606C4.1338 1.75112 4.03855 1.76281 3.94502 1.74999L2.78502 1.62499C2.62948 1.60831 2.47218 1.62676 2.32472 1.67898C2.17726 1.7312 2.04341 1.81586 1.93304 1.92671C1.82267 2.03756 1.73859 2.17178 1.68701 2.31947C1.63543 2.46715 1.61766 2.62453 1.63502 2.77999L1.76002 3.94999C1.77284 4.04352 1.76115 4.13877 1.72609 4.22642C1.69103 4.31407 1.63381 4.39111 1.56002 4.44999L0.64002 5.17499C0.518007 5.27291 0.419536 5.39698 0.351874 5.53804C0.284211 5.6791 0.249084 5.83355 0.249084 5.98999C0.249084 6.14644 0.284211 6.30089 0.351874 6.44195C0.419536 6.58301 0.518007 6.70707 0.64002 6.80499L1.56002 7.54499C1.63343 7.6042 1.69038 7.68128 1.7254 7.76884C1.76042 7.8564 1.77235 7.9515 1.76002 8.04499L1.63502 9.21999C1.61769 9.37513 1.63567 9.53217 1.68763 9.67937C1.73958 9.82657 1.82415 9.96011 1.93502 10.07C2.04333 10.183 2.17667 10.2691 2.3243 10.3212C2.47194 10.3733 2.62975 10.39 2.78502 10.37L3.96002 10.245C4.05355 10.2322 4.1488 10.2439 4.23645 10.2789C4.3241 10.314 4.40114 10.3712 4.46002 10.445L5.20002 11.365C5.29794 11.487 5.42201 11.5855 5.56306 11.6531C5.70412 11.7208 5.85857 11.7559 6.01502 11.7559C6.17147 11.7559 6.32592 11.7208 6.46698 11.6531C6.60803 11.5855 6.7321 11.487 6.83002 11.365L7.57002 10.445C7.6289 10.3712 7.70594 10.314 7.79359 10.2789C7.88124 10.2439 7.97649 10.2322 8.07002 10.245L9.24502 10.37C9.4003 10.39 9.5581 10.3733 9.70574 10.3212C9.85337 10.2691 9.98671 10.183 10.095 10.07C10.2059 9.96011 10.2905 9.82657 10.3424 9.67937C10.3944 9.53217 10.4124 9.37513 10.395 9.21999L10.27 8.04499C10.2577 7.9515 10.2696 7.8564 10.3046 7.76884C10.3397 7.68128 10.3966 7.6042 10.47 7.54499L11.39 6.80499C11.512 6.70707 11.6105 6.58301 11.6782 6.44195C11.7458 6.30089 11.781 6.14644 11.781 5.98999C11.781 5.83355 11.7458 5.6791 11.6782 5.53804C11.6105 5.39698 11.512 5.27291 11.39 5.17499H11.36ZM6.20002 7.52499C6.12297 7.62526 6.02555 7.70807 5.91418 7.76795C5.8028 7.82784 5.68 7.86344 5.55386 7.87242C5.42773 7.88139 5.30112 7.86354 5.18239 7.82003C5.06366 7.77652 4.95549 7.70834 4.86502 7.61999L3.64502 6.39999C3.5984 6.35337 3.56142 6.29803 3.53619 6.23712C3.51096 6.17621 3.49797 6.11092 3.49797 6.04499C3.49797 5.97906 3.51096 5.91378 3.53619 5.85287C3.56142 5.79196 3.5984 5.73661 3.64502 5.68999C3.69164 5.64337 3.74698 5.60639 3.8079 5.58116C3.86881 5.55593 3.93409 5.54295 4.00002 5.54295C4.06595 5.54295 4.13123 5.55593 4.19215 5.58116C4.25306 5.60639 4.3084 5.64337 4.35502 5.68999L5.50002 6.81499L7.45502 4.20999C7.53458 4.10391 7.65303 4.03377 7.78431 4.01502C7.84931 4.00573 7.9155 4.00934 7.97911 4.02564C8.04272 4.04193 8.10249 4.0706 8.15502 4.10999C8.20755 4.14939 8.2518 4.19875 8.28526 4.25525C8.31871 4.31175 8.34071 4.37428 8.34999 4.43928C8.35928 4.50428 8.35567 4.57048 8.33938 4.63408C8.32308 4.69769 8.29442 4.75746 8.25502 4.80999L6.20002 7.52499Z\" fill=\"#4C8AE7\"><\/path>\n          <\/svg>\n        <\/span>\n      <\/span>\n      <span class=\"ms-social-proof-text--text\"> also loved our Dress<\/span>\n    <\/span>\n  <\/div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {
+          }
+        },
+        "custom_dBL6bL": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: 0; margin-bottom: -5px;\">\n    <svg width=\"16px\" height=\"16px\" viewBox=\"0 0 16 16\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" fill=\"#000000\" style=\"margin-right: 8px;\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.61 3l5.74 1.53L15 5v6.74l-.37.48-6.13 1.69-6.14-1.69-.36-.48V5l.61-.47L8.34 3h.27zm-.09 1l-4 1 .55.2 3.43.9 3-.81.95-.29-3.93-1zM3 11.36l5 1.37V7L3 5.66v5.7zM9 7v5.73l5-1.37V5.63l-2.02.553V8.75l-1 .26V6.457L9 7z\"\/><\/svg>\n    <span>Best Seller | Low Stock<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_BWgUyz": {
+          "type": "custom",
+          "settings": {
+            "code": "{% if product.available %}\n\n  <div class=\"instock-pulse\" style=\"justify-content: left; font-family: 'Work Sans', sans-serif; font-weight: 500; text-align: left; margin-top: -20px; margin-bottom: 50px;\"> \n    <span class=\"icon--pulsing\"><\/span>\n    <span>In stock, ready to ship<\/span>\n  <\/div>\n\n  <style>\n\n    .instock-pulse {\n      display: flex;\n      flex-wrap: nowrap;\n      align-items: center;\n      justify-content: left; \/* Align items horizontally in the center *\/\n    }\n\n    .icon--pulsing {\n      position: relative;\n      width: 20px;\n      height: 20px;\n      margin-right: 2px;\n    }\n\n    .icon--pulsing:after, \n    .icon--pulsing:before {\n        background: #54c63a;\n        width: 10px;\n        height: 10px;\n        border-radius: 10px;\n        position: absolute;\n        left: 50%; \/* Center the dot horizontally *\/\n        top: 50%; \/* Center the dot vertically *\/\n        transform: translate(-50%, -50%); \/* Offset the dot by half its size *\/\n        content: \"\";\n    }\n\n    @keyframes inventory-pulse {\n      0%{\n        opacity:0.5;\n      }\n      to{\n        transform:scale(2.5);\n        opacity:0;\n      }\n    }\n\n  <\/style>\n\n{% endif %}"
+          }
+        },
+        "size_chart_gEJL7N": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "general-sizing-guide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "BEST SELLER | LOW STOCK"
+          }
+        },
+        "inventory_status_JG4TE6": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab_tQqpmn": {
+          "type": "tab",
+          "settings": {
+            "title": "Product Details",
+            "content": "<p>The corset top exudes a vintage femininity, adorned with a dainty floral print and soft lace trims, accented by pastel blue ribbons. Its structured bodice and delicate details sculpt a romantically refined silhouette.<\/p><ul><li>Flatters Figure<\/li><li>Vintage Charm<\/li><li>Secure Support<\/li><li>Tailored Comfort<\/li><li>Gentle on Skin<\/li><\/ul><p>Kelly is 5'6\" and wears a US-size S. <\/p>",
+            "page": ""
+          }
+        },
+        "tab_JmcbHn": {
+          "type": "tab",
+          "settings": {
+            "title": "Material + Care",
+            "content": "<p><strong>Material:<\/strong><\/p><ul><li>100% Cotton<\/li><\/ul><p><strong>Care:<\/strong><\/p><p>For cleaning, opt for eco-friendly dry cleaning methods and steer clear of services using perchloroethylene, known as \"Perc,\" to protect the fabric and the environment.<\/p>",
+            "page": ""
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping + Returns",
+            "content": "<p><strong>Shipping:<br\/><\/strong>Please allow 1-2 business days for processing and an additional 6-10 days for shipping, the <strong>tracking number provided.<\/strong><\/p><p><strong>NOTE:<\/strong> Due to high demand, we kindly ask you to allow up to 12 days to process and ship your order.<\/p><p><strong>Returns:<br\/><\/strong>If you're not completely satisfied with your purchase, we're here to help. Our policy allows for returns within 30 days of delivery for a refund.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_zYpPrW",
+        "custom_mUQgBJ",
+        "price",
+        "separator",
+        "custom_dBL6bL",
+        "custom_BWgUyz",
+        "size_chart_gEJL7N",
+        "variant_picker",
+        "sales_point",
+        "inventory_status_JG4TE6",
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e",
+        "buy_buttons",
+        "description",
+        "tab_tQqpmn",
+        "tab_JmcbHn",
+        "tab"
+      ],
+      "custom_css": [
+        ".collapsible-content {font-family: \"Work Sans\", sans-serif;}",
+        ".size-title {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__label {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__label {margin-top: -30px;}",
+        ".product__price-savings {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {text-align: left;}",
+        ".product__price--compare {text-align: left;}",
+        ".product__price-savings {text-align: left;}",
+        ".variant-wrapper {text-align: left;}"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": false,
+        "product_video_style": "muted"
+      }
+    },
+    "rich_text_8pj49n": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LK7Ezk": {
+          "type": "heading",
+          "settings": {
+            "title": "All Eyes On You"
+          }
+        },
+        "text_mpF8kT": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Standout from the crowd with every step, this dress is designed to be a head-turner. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LK7Ezk",
+        "text_mpF8kT"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "background_image_text_yUhLFL": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "The Star of the Show",
+        "text": "<p>The Forbidden Pocket Shorts offer a <strong>defining lift <\/strong>that contours your <strong>silhouette <\/strong>similar to a <strong>BBL without the pain<\/strong>, ensuring <strong>admiring glances<\/strong> with every step you take.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "focal_point": "bottom",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true
+      }
+    },
+    "text_and_image_QyQjTn": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Suninheart-Summer-Dresses-Woman-2023-Night-Evening-Satin-Dress-Sexy-Pink-Party-Dresses-Mini-Bodyocn-Dress.webp",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "The Star of the Show",
+        "text": "<p>Step into a world of unmatched elegance with the 'Jasmine' dress. Wrapping you in sophistication and allure, with a corset that flatters every curve for effortless, standout elegance. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_EmcK4m": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Montserrat\", sans-serif;}"
+      ],
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Irresistible Magnet",
+        "text": "<p><strong>Soft<\/strong>, <strong>stretchy<\/strong>, and <strong>utterly comfortable<\/strong>, they'll make you feel and look like an <strong>11 out of 10<\/strong>. <strong>Attraction <\/strong>has NEVER been this <strong>easy<\/strong>!<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_WkkqqT": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TikTok_Social_Proof_V_1.0.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Why It's Loved",
+        "text": "<p>Our customers love this for its spring vibe; the Sage floral corset top, with its crisp cotton craftsmanship, allover dainty florals, and pops of blue satin, radiates charm while the lace trims add a touch of romance.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"This corset is perfect from summer to fall. Throw on a denim jacket, pair it with a skirt or jeans, and you're set!\"<\/p>",
+            "author": "- Kelly R.",
+            "author_info": ""
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Perfect for the waist, this corset is especially flattering for my smaller top.\"<\/p>",
+            "author": "- Alexis N.",
+            "author_info": ""
+          }
+        },
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Fits perfectly, super comfy and adorable! I absolutely love this top and am thrilled with my purchase.\"<\/p>",
+            "author": "- Elena G.",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-1",
+        "testimonials-2",
+        "testimonials-0"
+      ],
+      "custom_css": [
+        ".testimonials-slider__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "The Goddess Have Spoken",
+        "align_text": "center",
+        "round_images": false,
+        "color_background": "#ffffff",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faq_3eTrjQ": {
+      "type": "faq",
+      "blocks": {
+        "question_Wd4DcB": {
+          "type": "question",
+          "settings": {
+            "title": "Should I size up?",
+            "text": "<p>For a more comfortable fit, we recommend to NOT size up.<\/p>"
+          }
+        },
+        "question_NHX4NL": {
+          "type": "question",
+          "settings": {
+            "title": "How do I wash it?",
+            "text": "<p>For cleaning, opt for eco-friendly dry cleaning methods and steer clear of services using perchloroethylene, known as \"Perc,\" to protect the fabric and the environment.<\/p>"
+          }
+        },
+        "question_pd9xwa": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return it if I don't like it?",
+            "text": "<p>Absolutely! You can return your purchase for a full refund. Our policy allows for a return within 30 days of receipt. For more information on initiating your return, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">refund policy<\/a> page. <\/p><p>NOTE: Items that are on sale or gift items (gift cards) are only eligible for a 15% refund of the original cost.<\/p>"
+          }
+        },
+        "question_NKckyE": {
+          "type": "question",
+          "settings": {
+            "title": "Any further questions?",
+            "text": "<p>Please visit our <a href=\"\/pages\/contact\" title=\"Contact Us\">Contact Us<\/a> page and fill out the form at the bottom of the page. Thank you!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_Wd4DcB",
+        "question_NHX4NL",
+        "question_pd9xwa",
+        "question_NKckyE"
+      ],
+      "custom_css": [
+        ".collapsible-content__inner {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Questions? We got you covered"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 2
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "1713032553677c558e": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_RDLHkr": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_RDLHkr"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_8pj49n",
+    "background_image_text_yUhLFL",
+    "text_and_image_QyQjTn",
+    "text_and_image_EmcK4m",
+    "text_and_image_WkkqqT",
+    "testimonials",
+    "loox-product-reviews-app-section",
+    "faq_3eTrjQ",
+    "product-recommendations",
+    "collection-return",
+    "recently-viewed",
+    "sub",
+    "1713032553677c558e"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "slideshow_ExA8LJ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Eg6Xwf": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Dianara",
+            "title_size": 70,
+            "subheading": "Embrace Your Divine Femininity",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/426021304_3840473292895707_1198697847121457245_n.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Eg6Xwf"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "slideshow_ExA8LJ",
+    "main"
+  ]
+}

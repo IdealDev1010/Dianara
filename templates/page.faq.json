@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq-0": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Shipping",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "title": "I just placed an order, when will it ship?",
+            "text": "<p>We try our best to ship items as fast as we can. Please allow 1 to 3 days production time for your order to ship out, average shipping times are 6 to 8 days for all shipments. Tracking numbers will be updated 3 to 4 days after your order has been SHIPPED. If you don't have a tracking number after 5 business please email us. For all other countries, please visit our shipping policy.<\/p>"
+          }
+        },
+        "question_rRDtJY": {
+          "type": "question",
+          "settings": {
+            "title": "How can I track my order?",
+            "text": "<p>Your order's shipping confirmation and details arrive via email.<\/p><p>Expect longer delivery times during peak seasons. For tracking, visit our <a href=\"\/pages\/track-your-order\" title=\"Track Your Order\">Tracking Portal<\/a> with your email, zip code, or tracking number. <\/p><p>Tracking updates may take 24-72 hours post-shipment.<\/p>"
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I cancel my order?",
+            "text": "<p>You can cancel your order with no penalty as long as it is within 24-48 hours! You must cancel your order before it ships. If the item is already sent please use our easy return system to get a full refund.<\/p>"
+          }
+        },
+        "faq-4": {
+          "type": "question",
+          "settings": {
+            "title": "How long does shipping take?",
+            "text": "<p>Shipping times vary as we do ship worldwide from different fulfillment centers based on your location. For all countries, please visit our shipping policy.<\/p>"
+          }
+        },
+        "faq-3": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Returns",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "question_KQx83j": {
+          "type": "question",
+          "settings": {
+            "title": "I am not in love with my order, can it be returned?",
+            "text": "<p>We offer a 100% money-back guarantee for defective or damaged products. We give you 30 days to send it back to us for a full refund. Once we have received the product we will refund the full amount of your original purchase. Please Include all a name and order numbers on the returned parcels.<br\/><br\/>Unfortunately, we cannot accept returns on sale items or gift cards.<br\/><br\/>Please note: If your package is on the way, you must wait for it to arrive and return it before receiving a refund.<\/p>"
+          }
+        },
+        "question_6rmffp": {
+          "type": "question",
+          "settings": {
+            "title": "In case of a return, will I receive a refund on the shipping cost?",
+            "text": "<p>Please note we do not accept returns for on-sale items. In the case that the item is NOT on sale. We can only partially cover return costs once the items find their way back to us.<\/p>"
+          }
+        },
+        "question_fJNmRr": {
+          "type": "question",
+          "settings": {
+            "title": "What if I don't like the club (our VIP section)?",
+            "text": "<p>Join our club for exclusive offers and discounts on future items:<\/p><ul><li>Sign up via our homepage pop-up.<\/li><li>Opt-in at checkout or account creation.<\/li><li>Subscribe from the site footer.<\/li><\/ul><p>To leave the club:<\/p><ul><li>Use the 'opt-out' link in any club email.<\/li><li>Need help? Contact us directly for swift support.<\/li><\/ul>"
+          }
+        },
+        "question_tgjpJE": {
+          "type": "question",
+          "settings": {
+            "title": "What if there is an issue? Can I Contact You?",
+            "text": "<p>Absolutely! We are here to help you make your home beautiful! Please email us; we will be happy to assist you in any way we can. We do receive a large number of emails, If you wish to get a prompt response please attach your order number and address the problem clearly, thanks.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-0",
+        "faq-1",
+        "question_rRDtJY",
+        "faq-2",
+        "faq-4",
+        "faq-3",
+        "question_KQx83j",
+        "question_6rmffp",
+        "question_fJNmRr",
+        "question_tgjpJE"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}

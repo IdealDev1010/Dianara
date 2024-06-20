@@ -1,0 +1,387 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_zYpPrW": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <link href=\"https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@500&display=swap\" rel=\"stylesheet\">\n    <style>\n        .rating {\n            font-size: 24px;\n            display: inline-block;\n            unicode-bidi: bidi-override;\n            color: #c5c5c5;\n            position: relative;\n            margin-top: -10px;\n            margin-bottom: -10px;\n             font-family: 'Work Sans', sans-serif;\n            font-weight: 500;\n            text-align: left; \n        }\n\n        .rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .half-rating {\n            display: block;\n            position: absolute;\n            top: 0;\n            left: 0;\n            white-space: nowrap;\n            overflow: hidden;\n            width: 90%; \n            color: #000000; \n            font-family: \"Work Sans\", sans-serif;\n        }\n\n        .half-rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .reviews {\n            font-family: \"Work Sans\", sans-serif;\n            font-weight: 500; \n            text-align: left; \n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"rating\">\n        <div class=\"half-rating\"><\/div>\n    <\/div>\n    <span class=\"reviews\"><strong>Rated 4.8\/5<\/strong> Based on <strong>74<\/strong> Reviews<\/span>\n<\/body>\n<\/html>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {
+          }
+        },
+        "custom_dBL6bL": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: 0; margin-bottom: -5px;\">\n    <svg width=\"16px\" height=\"16px\" viewBox=\"0 0 16 16\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" fill=\"#000000\" style=\"margin-right: 8px;\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.61 3l5.74 1.53L15 5v6.74l-.37.48-6.13 1.69-6.14-1.69-.36-.48V5l.61-.47L8.34 3h.27zm-.09 1l-4 1 .55.2 3.43.9 3-.81.95-.29-3.93-1zM3 11.36l5 1.37V7L3 5.66v5.7zM9 7v5.73l5-1.37V5.63l-2.02.553V8.75l-1 .26V6.457L9 7z\"\/><\/svg>\n    <span>Best Seller | Low Stock<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_BWgUyz": {
+          "type": "custom",
+          "settings": {
+            "code": "{% if product.available %}\n\n  <div class=\"instock-pulse\" style=\"justify-content: left; font-family: 'Work Sans', sans-serif; font-weight: 500; text-align: left; margin-top: -20px; margin-bottom: 40px;\"> \n    <span class=\"icon--pulsing\"><\/span>\n    <span>In stock, ready to ship<\/span>\n  <\/div>\n\n  <style>\n\n    .instock-pulse {\n      display: flex;\n      flex-wrap: nowrap;\n      align-items: center;\n      justify-content: left; \/* Align items horizontally in the center *\/\n    }\n\n    .icon--pulsing {\n      position: relative;\n      width: 20px;\n      height: 20px;\n      margin-right: 2px;\n    }\n\n    .icon--pulsing:after, \n    .icon--pulsing:before {\n        background: #54c63a;\n        width: 10px;\n        height: 10px;\n        border-radius: 10px;\n        position: absolute;\n        left: 50%; \/* Center the dot horizontally *\/\n        top: 50%; \/* Center the dot vertically *\/\n        transform: translate(-50%, -50%); \/* Offset the dot by half its size *\/\n        content: \"\";\n    }\n\n    @keyframes inventory-pulse {\n      0%{\n        opacity:0.5;\n      }\n      to{\n        transform:scale(2.5);\n        opacity:0;\n      }\n    }\n\n  <\/style>\n\n{% endif %}"
+          }
+        },
+        "size_chart_gEJL7N": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "size-chart"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "BEST SELLER | LOW STOCK"
+          }
+        },
+        "inventory_status_JG4TE6": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab_tQqpmn": {
+          "type": "tab",
+          "settings": {
+            "title": "Product Details",
+            "content": "<p>Dianara's One-Shoulder Gown boasts an elegant cut-out design, a striking blue hue, and a belted waist for a sophisticated, figure-enhancing look. Ideal for exclusive events, this gown is a statement of elegance and modernity.<\/p><ul><li>Composition: 80% polyamide, 20% spandex<\/li><li>Care: Hand wash only<\/li><li>Design: Unlined with a hidden side zipper<\/li><li>Style: One-shoulder with draped fabric<\/li><li>Details: Crystal embellishments and ring detail at the shoulder<\/li><li>Material: Lightweight jersey fabric<\/li><li>Feature: Side seam slit for movement<\/li><\/ul><p>Sophia is 5'6\" and wears a size XS.<\/p>",
+            "page": ""
+          }
+        },
+        "tab_JmcbHn": {
+          "type": "tab",
+          "settings": {
+            "title": "Material + Care",
+            "content": "<p><strong>Material:<\/strong><\/p><ul><li>80% Polyamide<\/li><li>20% Spandex<\/li><\/ul><p><strong>NOTE:<\/strong> It is recommended to size up to ensure the proper fit.<\/p><p><strong>Care:<\/strong><\/p><p>Hand wash only. Avoid bleach and ironing. Follow care instructions for longevity.<\/p>",
+            "page": ""
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping + Returns",
+            "content": "<p><strong>Shipping:<br\/><\/strong>Your order will be shipped within 6-9 days, depending on the shipping option you select. Processing takes 1-3 business days during normal hours.<\/p><p>Tracking numbers are provided instantly, ensuring you can monitor your order every step of the way. <\/p><p><strong>NOTE:<\/strong> During times of high demand, please allow up to 14 days for processing.  <br\/><br\/><strong>Returns:<br\/><\/strong>We are happy to take back the product and issue you a full refund of your purchase. We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_zYpPrW",
+        "price",
+        "separator",
+        "custom_dBL6bL",
+        "custom_BWgUyz",
+        "size_chart_gEJL7N",
+        "variant_picker",
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e",
+        "sales_point",
+        "inventory_status_JG4TE6",
+        "buy_buttons",
+        "description",
+        "tab_tQqpmn",
+        "tab_JmcbHn",
+        "tab"
+      ],
+      "custom_css": [
+        ".collapsible-content {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__button-label {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {font-family: \"Work Sans\", sans-serif;}",
+        ".product__quantity {text-align: left;}",
+        ".product__price-savings {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {text-align: left;}",
+        ".product__price--compare {text-align: left;}",
+        ".product__price-savings {text-align: left;}",
+        ".variant__label {text-align: left;}",
+        ".variant-input-wrap {text-align: left;}"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": false,
+        "product_video_style": "muted"
+      }
+    },
+    "background_image_text_yUhLFL": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "The Star of the Show",
+        "text": "<p>The Forbidden Pocket Shorts offer a <strong>defining lift <\/strong>that contours your <strong>silhouette <\/strong>similar to a <strong>BBL without the pain<\/strong>, ensuring <strong>admiring glances<\/strong> with every step you take.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "focal_point": "bottom",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true
+      }
+    },
+    "text_and_image_QyQjTn": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Be The Star of the Show",
+        "text": "<p>The Forbidden Pocket Shorts offer a <strong>defining lift <\/strong>that contours your <strong>silhouette <\/strong>similar to a <strong>BBL without the pain<\/strong>, ensuring <strong>admiring glances<\/strong> with every step you take.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_EmcK4m": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Montserrat\", sans-serif;}"
+      ],
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Become Irresistible",
+        "text": "<p><strong>Soft<\/strong>, <strong>stretchy<\/strong>, and <strong>utterly comfortable<\/strong>, they'll make you feel and look like an <strong>11 out of 10<\/strong>. <strong>Attraction <\/strong>has NEVER been this <strong>easy<\/strong>!<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_WkkqqT": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text {font-family: \"Montserrat\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TikTok_Social_Proof_V_1.0.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Loved By Thousands",
+        "text": "<p>Our clothing empowers thousands, blending style and comfort for a confident, powerful look. It's more than fashion; it's a celebration of individual strength and self-expression.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Ever since I found Dianara, my wardrobe has transformed. Their pieces are so empowering, making me feel bold and beautiful every day.<\/p>",
+            "author": "- Victoria A.",
+            "author_info": ""
+          }
+        },
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>HONESTLY. This brand is sooo good.  It's all about comfort that doesn't compromise and boosts my confidence like never before. BUY THEM NOW!!!<\/p>",
+            "author": "- Amy M.",
+            "author_info": ""
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"I'm usually VERY skeptical of these TikTok brands but Dianara proved me wrong. They are literally PERFECT!\"<\/p>",
+            "author": "- Crystal K.",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-1",
+        "testimonials-0",
+        "testimonials-2"
+      ],
+      "custom_css": [
+        ".testimonials-slider__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Don't Just Take Our Word For It",
+        "align_text": "center",
+        "round_images": false,
+        "color_background": "#ffffff",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faq_3eTrjQ": {
+      "type": "faq",
+      "blocks": {
+        "question_Wd4DcB": {
+          "type": "question",
+          "settings": {
+            "title": "Should I size up?",
+            "text": "<p>Yes, it is recommended to size up to ensure maximum comfort.<\/p>"
+          }
+        },
+        "question_NHX4NL": {
+          "type": "question",
+          "settings": {
+            "title": "Do I hand wash it?",
+            "text": "<p>It is HIGHLY recommended to hand wash it.<\/p>"
+          }
+        },
+        "question_pd9xwa": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return it if I don't like it?",
+            "text": "<p>Absolutely, you can return your purchase for a full refund. Our policy allows for returns within 30 days of receipt. For detailed information and to initiate your return, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">refund policy<\/a> page.<\/p><p>NOTE: Items that are on sale or gift items (gift cards) are non-refundable. Thank you for understanding.<\/p>"
+          }
+        },
+        "question_NKckyE": {
+          "type": "question",
+          "settings": {
+            "title": "Any further questions?",
+            "text": "<p>Please visit our <a href=\"\/pages\/contact\" title=\"Contact Us\">Contact Us<\/a> page and fill out the form at the bottom of the page. Thank you!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_Wd4DcB",
+        "question_NHX4NL",
+        "question_pd9xwa",
+        "question_NKckyE"
+      ],
+      "custom_css": [
+        ".collapsible-content__inner {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Questions? We got you covered!"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 2
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "1713032749a0e80fea": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_VT7dCV": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_VT7dCV"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "background_image_text_yUhLFL",
+    "text_and_image_QyQjTn",
+    "text_and_image_EmcK4m",
+    "text_and_image_WkkqqT",
+    "testimonials",
+    "loox-product-reviews-app-section",
+    "faq_3eTrjQ",
+    "product-recommendations",
+    "collection-return",
+    "recently-viewed",
+    "sub",
+    "1713032749a0e80fea"
+  ]
+}

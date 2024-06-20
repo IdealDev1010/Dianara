@@ -1,0 +1,511 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_zYpPrW": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <link href=\"https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@500&display=swap\" rel=\"stylesheet\">\n    <style>\n        .rating {\n            font-size: 24px;\n            display: inline-block;\n            unicode-bidi: bidi-override;\n            color: #c5c5c5;\n            position: relative;\n            margin-top: -10px;\n            margin-bottom: -10px;\n             font-family: 'Work Sans', sans-serif;\n            font-weight: 500;\n            text-align: left; \n        }\n\n        .rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .half-rating {\n            display: block;\n            position: absolute;\n            top: 0;\n            left: 0;\n            white-space: nowrap;\n            overflow: hidden;\n            width: 90%; \n            color: #000000; \n            font-family: \"Work Sans\", sans-serif;\n        }\n\n        .half-rating::before {\n            content: \"★★★★★\";\n            letter-spacing: 3px;\n        }\n\n        .reviews {\n            font-family: \"Work Sans\", sans-serif;\n            font-weight: 500; \n            text-align: left; \n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"rating\">\n        <div class=\"half-rating\"><\/div>\n    <\/div>\n    <span class=\"reviews\">Rated \n<strong>4.9\/5<\/strong> based on <strong>279<\/strong> reviews<\/span>\n<\/body>\n<\/html>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "custom_L9NaaL": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: 0px; margin-bottom: 0px;\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/tan-lines.png?v=1717965504\" width=\"16\" height=\"16\" style=\"margin-right: 8px;\">\n    <span>85% less tan lines<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_gBD78g": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"info-container\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: -25px; margin-bottom: -10px;\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/quick-dry.png?v=1717965833\" width=\"16\" height=\"16\" style=\"margin-right: 8px;\"\/>\n    <span class=\"info-text\" style=\"color: black;\">3x fast drying<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_dBL6bL": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: 0px; margin-bottom: 0px;\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/weight-loss.png?v=1717965504\" width=\"16\" height=\"16\" style=\"margin-right: 8px;\">\n    <span>True to size design<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "size_chart_gEJL7N": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "bodysuit-sizing-guide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "custom_nAKNRm": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"Product__EnjoyReturns\" style=\"text-align: left;\">\n  <p style=\"font-family: 'Work Sans', sans-serif; font-weight: 500; display: inline-flex; align-items: center; margin-top: -40px; margin-bottom: -10px; margin-left: 5px;\">\n    <svg width=\"10px\" height=\"10px\" viewBox=\"0 0 10 10\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" style=\"margin-right: 4px; vertical-align: middle;\">\n      <circle cx=\"5\" cy=\"5\" r=\"5\" fill=\"#DE1515\"><\/circle>\n    <\/svg>\n    <span style=\"color: #DE1515;\">Only 9 left at this price<\/span>\n  <\/p>\n<\/div>"
+          }
+        },
+        "custom_LAC89i": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Notification Box<\/title>\n    <style>\n        body, html {\n            margin: 0;\n            padding: 0;\n            background: #fff;\n        }\n\n        .notification {\n            background-color: #FFCCCC; \/* Light pink background *\/\n            color: #000000; \/* Black text color *\/\n            font-family: Arial, sans-serif; \/* Consistent font family *\/\n            font-size: 14px; \/* Font size *\/\n            border-radius: 5px; \/* Rounded corners *\/\n            padding: 10px 15px; \/* Padding around the text *\/\n            display: inline-block; \/* Use inline-block for better control *\/\n            width: auto; \/* Auto width based on content *\/\n            max-width: 300px; \/* Max width to prevent too wide notifications *\/\n            box-shadow: 0 4px 8px rgba(0,0,0,0.1); \/* Subtle shadow for depth *\/\n        }\n\n        .container {\n            text-align: left; \/* Align container to the left *\/\n            padding-left: 20px; \/* Padding from the left side of the page *\/\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container\">\n        <div class=\"notification\">Only 7 bodysuits left at this price.<\/div>\n    <\/div>\n<\/body>\n<\/html>"
+          }
+        },
+        "custom_ak7mV3": {
+          "type": "custom",
+          "settings": {
+            "code": "<style>\n  .pill-container {\n    padding: 8px 12px;\n    background-color: #1877F2; \/* Set background color to #1877F2 *\/\n    border-radius: 20px; \/* Adjust as needed to give the pill shape *\/\n    display: inline-block; \/* Ensure it wraps content properly *\/\n    position: relative; \/* Add position relative for centering *\/\n    margin-top: -15px; \/* Reduce the top margin *\/\n  }\n\n  .pill-container img {\n    vertical-align: middle; \/* Align the image vertically *\/\n  }\n\n  .pill-container span {\n    margin-left: 8px; \/* Adjust as needed to give space between image and text *\/\n    color: #ffffff; \/* Set text color to white *\/\n  }\n\n  \/* Align the pill to the left *\/\n  .left-align {\n    display: flex;\n    justify-content: flex-start; \/* Align items to the left *\/\n    align-items: center;\n  }\n\n  \/* Gradient border *\/\n  .pill-border {\n    position: absolute;\n    top: -4px;\n    left: -4px;\n    right: -4px;\n    bottom: -4px;\n    border-radius: 24px; \/* Match the border radius of the pill *\/\n    background: linear-gradient(135deg, #26F0FF, #E82356);\n    z-index: -1;\n  }\n<\/style>\n\n<div class=\"left-align\">\n  <div class=\"pill-container\">\n    <div class=\"pill-border\"><\/div>\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0812\/1414\/4845\/files\/facebook.png?v=1709554524\" alt=\"Facebook Logo\">\n    <span>Over 4.2M Views on Facebook<\/span>\n  <\/div>\n<\/div>"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "BEST SELLER | LOW STOCK"
+          }
+        },
+        "inventory_status_JG4TE6": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
+          }
+        },
+        "custom_EVKbxd": {
+          "type": "custom",
+          "settings": {
+            "code": "<style>\n@import url('https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@400;500;600&display=swap');\n\n.info-container {\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    gap: 12px;\n    margin: 20px 0 -10px;\n    font-family: 'Work Sans', sans-serif;\n}\n\n.info-icon {\n    max-width: 24px;\n    width: 100%;\n    margin-top: -2px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border-radius: 22px;\n}\n\n.info-text {\n    color: #555;\n    line-height: 16px;\n    text-align: left; \/* Align the text to the left *\/\n}\n<\/style>\n\n<div class=\"info-container\">\n    <img class=\"info-icon\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0027\/8134\/7953\/files\/shield.svg?v=1700063933\">\n    <span class=\"info-text\"><b>Not sure about your size?<\/b> Try a few on at home with free exchanges<\/span>\n<\/div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "custom_MbPqy8": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"tabbed-container\" style=\"margin-top: 20px;\">\n  <!-- Tab Links -->\n  <div class=\"tab-links\">\n    <button class=\"tab-link active\" onclick=\"openTab(event, 'description')\">Product Details<\/button>\n    <button class=\"tab-link\" onclick=\"openTab(event, 'shipping')\"> Shipping & Returns<\/button>\n    <button class=\"tab-link\" onclick=\"openTab(event, 'material')\"> Material + Care<\/button>\n  <\/div>\n \n  <!-- Tab Content -->\n  <div id=\"description\" class=\"tab-content\" style=\"display: block;\">\n    <p>Our One-Piece is a unique swimsuit with sheer sections in the abdominal and back areas for a more effective tanning experience. It has light core compression for a flattering fit, medium coverage in the back, a low squared back, and fully adjustable straps.<\/p>\n    <ul style=\"margin-top: 10px;\">\n      <li>Less tan lines<\/li>\n      <li>Bodyshaping Built-in<\/li>\n      <li>Techno Fabric<\/li>\n      <li>True to size<\/li>\n      <li>Eco-friendly<\/li>\n    <\/ul>\n  <\/div>\n \n  <div id=\"shipping\" class=\"tab-content\">\n  <p><strong>Shipping:<\/strong><\/p>\n  <p style=\"margin-left: 20px;\">Please allow 1-2 business days for processing and an additional 6-10 days for shipping, the tracking number provided.<\/p>\n  <p style=\"margin-left: 20px; margin-top: 10px;\"><strong>NOTE:<\/strong> Due to high demand, we kindly ask you to allow up to 12 days to process and ship your order.<\/p>\n  <p style=\"margin-left: 20px; margin-top: 10px;\">We offer Priority Shipping for 3 USD (7-10 Days) and Priority Expedited Shipping (5-7 Days) for 5 USD.<\/p>\n  <p style=\"margin-left: 20px; margin-top: 10px;\">Free Standard Shipping on $60+<\/p>\n  <p style=\"margin-top: 20px;\"><strong>Returns:<\/strong><\/p>\n  <p style=\"margin-left: 20px;\">If you're not completely satisfied with your purchase, we're here to help. Our policy allows for returns within 30 days of delivery for a refund.<\/p>\n  <\/div>\n \n  <div id=\"material\" class=\"tab-content\">\n    <p><strong>Material:<\/strong><\/p>\n    <ul style=\"margin-left: 20px;\">\n      <li>88% Nylon<\/li>\n      <li>12% Spandex<\/li>\n    <\/ul>\n    <p style=\"margin-top: 20px;\"><strong>Care:<\/strong><\/p>\n    <p style=\"margin-left: 20px;\">Hand Wash Only! Do not tumble dry.<\/p>\n  <\/div>\n<\/div>\n\n<script>\n  function openTab(evt, tabName) {\n    var i, tabcontent, tablinks;\n    tabcontent = document.getElementsByClassName(\"tab-content\");\n    for (i = 0; i < tabcontent.length; i++) {\n      tabcontent[i].style.display = \"none\";\n    }\n    tablinks = document.getElementsByClassName(\"tab-link\");\n    for (i = 0; i < tablinks.length; i++) {\n      tablinks[i].className = tablinks[i].className.replace(\" active\", \"\");\n    }\n    document.getElementById(tabName).style.display = \"block\";\n    evt.currentTarget.className += \" active\";\n  }\n<\/script>\n\n<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Work+Sans:wght@400;500&display=swap');\n  .tabbed-container {\n    font-family: 'Work Sans', sans-serif;\n    width: 100%;\n    margin-top: 20px; \/* Add margin at the top *\/\n  }\n  .tab-links {\n    display: flex;\n    justify-content: start;\n    border-bottom: 2px solid #ccc;\n  }\n  .tab-link {\n    background: none;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    padding: 10px 20px;\n    transition: background-color 0.3s;\n    font-size: 16px;\n    color: #333;\n    border-bottom: 2px solid transparent; \/* Ensures the text doesn't move *\/\n    margin-bottom: -2px; \/* Aligns the text vertically *\/\n    font-family: 'Work Sans', sans-serif;\n  }\n  .tab-link:hover {\n    background-color: #ddd;\n  }\n  .tab-link.active {\n    font-weight: bold;\n    border-bottom: 2px solid black; \n  }\n  .tab-content {\n    display: none;\n    padding: 20px;\n    text-align: left; \/* Align text to left *\/\n    font-family: 'Work Sans', sans-serif;\n  }\n  .tab-content p {\n    margin: 0;\n  }\n<\/style>"
+          }
+        },
+        "custom_EV9dVA": {
+          "type": "custom",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Money Back Guarantee<\/title>\n<style>\n  .money-back-container {\n    display: flex;\n    align-items: flex-start; \/* Aligns items to the start of the container *\/\n    padding-left: 0; \/* Removes padding on the left for full left alignment *\/\n    text-align: left; \/* Ensures text within the container is left-aligned *\/\n    margin-top: -10px; \/* Adjusts the top margin of the entire container *\/\n  }\n  .money-back-svg {\n    margin-right: 10px; \/* Adjust the space between the SVG and the text *\/\n    width: 30px; \/* Width of the SVG image *\/\n    height: auto; \/* Keeps the aspect ratio of the SVG image *\/\n    margin-top: -15px; \/* Adjusts the top margin of the SVG *\/\n  }\n  .money-back-text {\n    font-size: 14px; \/* Size of the text *\/\n    color: #333; \/* Color of the text *\/\n    margin-top: -10px; \/* Adjusts the top margin of the text to align properly with the SVG *\/\n  }\n<\/style>\n<\/head>\n<body>\n\n<div class=\"money-back-container\">\n  <!-- SVG image -->\n  <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/30-days.png?v=1714171015\" alt=\"30 Days\" class=\"money-back-svg\">\n\n  <!-- Text -->\n  <div class=\"money-back-text\">\n    30 day money back guarantee\n  <\/div>\n<\/div>\n<\/body>\n<\/html>"
+          }
+        },
+        "tab_tQqpmn": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Product Details",
+            "content": "<p>A striking dress for a memorable night, our dress offers 100% authentic leather to provide comfort at all events!<\/p><ul><li>100% Cruelty-Free<\/li><li>Boned, waist-snatching bodice<\/li><li>Fluted silhouette<\/li><li>Easy zip-back<\/li><li>Smooth satin lining<\/li><\/ul><p>Lily (the model) is 5'8\" and wears a US-size S.<\/p>",
+            "page": ""
+          }
+        },
+        "tab_JmcbHn": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Material + Care",
+            "content": "<p><strong>Material:<\/strong><\/p><ul><li>75% Vegan PU<\/li><li>25% Satin<\/li><\/ul><p>NOTE: The satin is for the lining within the dress.<\/p><p><strong>Care:<br\/><\/strong>Dry Clean. Machine wash cold, mild detergents. Do not tumble dry.<\/p>",
+            "page": ""
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping + Returns",
+            "content": "<p><strong>Shipping:<br\/><\/strong>Please allow 1-2 business days for processing and an additional 6-10 days for shipping, the <strong>tracking number provided.<\/strong><\/p><p><strong>NOTE:<\/strong> Due to high demand, we kindly ask you to allow up to 12 days to process and ship your order.<\/p><p><strong>Returns:<br\/><\/strong>If you're not completely satisfied with your purchase, we're here to help. Our policy allows for returns within 30 days of delivery for a refund.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_zYpPrW",
+        "price",
+        "separator",
+        "custom_L9NaaL",
+        "custom_gBD78g",
+        "custom_dBL6bL",
+        "size_chart_gEJL7N",
+        "variant_picker",
+        "custom_nAKNRm",
+        "custom_LAC89i",
+        "custom_ak7mV3",
+        "sales_point",
+        "inventory_status_JG4TE6",
+        "39236fc6-a352-4de0-bc8b-d8b73c9ab83e",
+        "buy_buttons",
+        "custom_EVKbxd",
+        "description",
+        "custom_MbPqy8",
+        "custom_EV9dVA",
+        "tab_tQqpmn",
+        "tab_JmcbHn",
+        "tab"
+      ],
+      "custom_css": [
+        ".collapsible-content {font-family: \"Work Sans\", sans-serif;}",
+        ".size-title {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__label {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {font-family: \"Work Sans\", sans-serif;}",
+        ".variant__label {margin-top: -10px;}",
+        ".product__price-savings {font-family: \"Work Sans\", sans-serif;}",
+        ".product__price {text-align: left;}",
+        ".product__price--compare {text-align: left;}",
+        ".product__price-savings {text-align: left;}",
+        ".variant-wrapper {text-align: left;}"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": false,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_content_PDq9FT": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_Lpit89": {
+          "type": "liquid",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Video Carousel<\/title>\n    <link rel=\"stylesheet\" href=\"https:\/\/cdn.jsdelivr.net\/npm\/swiper\/swiper-bundle.min.css\"\/>\n    <style>\n        body, html {\n            margin: 0;\n            padding: 0;\n            background: #fff;\n        }\n        .swiper {\n            width: 100%;\n            height: auto;\n            margin-top: 20px;\n        }\n        .swiper-slide {\n            text-align: center;\n            background: #fff;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n        }\n        .video-container {\n            width: 300px; \/* Adjust this value to change video size *\/\n            height: auto;\n        }\n        video {\n            width: 100%;\n            height: auto;\n        }\n        .video-title {\n            font-size: 18px;\n            color: #333;\n            margin-top: 10px;\n        }\n        .swiper-button-prev, .swiper-button-next {\n            color: #000;\n            width: 30px;\n            height: 30px;\n            position: absolute;\n            top: 50%;\n            transform: translateY(-50%);\n            background-size: 50%; \/* Makes SVG icon smaller *\/\n            background-position: center;\n            background-repeat: no-repeat;\n        }\n        .swiper-button-prev {\n            left: 10px;\n            background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/arrow.png?v=1716830399');\n        }\n        .swiper-button-next {\n            right: 10px;\n            background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0587\/4132\/5898\/files\/arrowright.png?v=1716830399');\n        }\n        .swiper-pagination-bullet {\n            background: #999; \/* Non-active dot color *\/\n            opacity: 1;\n        }\n        .swiper-pagination-bullet-active {\n            background: #000; \/* Active dot color *\/\n        }\n        .swiper-pagination {\n            position: relative;\n            text-align: center;\n            margin-top: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div style=\"text-align:center; padding:20px;\">\n        <h2>REAL STORIES REAL RESULTS<\/h2>\n        <p>Explore our world of style and comfort, as celebrated by hundreds of thrilled customers.<\/p>\n    <\/div>\n    <div class=\"video-social-slider swiper\">\n        <div class=\"swiper-wrapper\">\n            <div class=\"swiper-slide\">\n                <div class=\"video-container\">\n                    <video playsinline loop muted controls autoplay>\n                        <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/02e6b741dcc241d2a86c2010f2ffa935.mp4\" type=\"video\/mp4\">\n                    <\/video>\n                <\/div>\n                <div class=\"video-title\">Emma S.<\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"video-container\">\n                    <video playsinline loop muted controls autoplay>\n                        <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9be45bed549546f59dfff56254160f3e.mp4\" type=\"video\/mp4\">\n                    <\/video>\n                <\/div>\n                <div class=\"video-title\">Jessica W.<\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"video-container\">\n                    <video playsinline loop muted controls autoplay>\n                        <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6e0d603d309d459dbc923a90ba85d99e.mp4\" type=\"video\/mp4\">\n                    <\/video>\n                <\/div>\n                <div class=\"video-title\">Kaia J.<\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"video-container\">\n                    <video playsinline loop muted controls autoplay>\n                        <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c7e41bb9ce3f4c0a87ba5749a3a92825.mp4\" type=\"video\/mp4\">\n                    <\/video>\n                <\/div>\n                <div class=\"video-title\">Grace H.<\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"video-container\">\n                    <video playsinline loop muted controls autoplay>\n                        <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/040813f79097492baa4c49572b301de6.mp4\" type=\"video\/mp4\">\n                    <\/video>\n                <\/div>\n                <div class=\"video-title\">Erika D.<\/div>\n            <\/div>\n            <div class=\"swiper-slide\">\n                <div class=\"video-container\">\n                    <video playsinline loop muted controls autoplay>\n                        <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8ec470508bc34d7aa484fb45c4f25afe.mp4\" type=\"video\/mp4\">\n                    <\/video>\n                <\/div>\n                <div class=\"video-title\">Sydney C.<\/div>\n            <\/div>\n        <\/div>\n        <div class=\"swiper-button-prev\"><\/div>\n        <div class=\"swiper-button-next\"><\/div>\n        <div class=\"swiper-pagination\"><\/div>\n    <\/div>\n\n    <script src=\"https:\/\/cdn.jsdelivr.net\/npm\/swiper\/swiper-bundle.min.js\"><\/script>\n    <script>\n        document.addEventListener('DOMContentLoaded', function() {\n            const swiper = new Swiper('.swiper', {\n                speed: 300,\n                loop: true,\n                pagination: {\n                    el: '.swiper-pagination',\n                    type: 'bullets',\n                    clickable: true\n                },\n                navigation: {\n                    nextEl: '.swiper-button-next',\n                    prevEl: '.swiper-button-prev',\n                },\n                breakpoints: {\n                    1024: {\n                        slidesPerView: 3,\n                        spaceBetween: 30,\n                        autoplay: {\n                            delay: 2500,\n                            disableOnInteraction: false,\n                        },\n                    }\n                }\n            });\n        });\n    <\/script>\n<\/body>\n<\/html>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_Lpit89"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Absolutely in love with the look and how my tan turned out! The quality is amazing and it’ll definitely last me a long time!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled-2_84.png",
+            "author": "- Jenna C.",
+            "author_info": ""
+          }
+        },
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"The fabric is gentle on my skin, and I don't have to worry about harsh tan lines anymore. Love it!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled-2_85.png",
+            "author": "- Sophia R.",
+            "author_info": ""
+          }
+        },
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"I am so so happy with the fit and functionality of the suit and I need more! I recommend it!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled-2_86.png",
+            "author": "- Emily J.",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-2",
+        "testimonials-1",
+        "testimonials-0"
+      ],
+      "custom_css": [
+        ".testimonials-slider__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Real Stories Real Results",
+        "align_text": "center",
+        "round_images": false,
+        "color_background": "#ffffff",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "featured_collection_Cc4tV8": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Pair It With",
+        "home_featured_products": "leather-pairs",
+        "per_row": 5,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "text_and_image_EmcK4m": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/beforeandafter.webp",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Tanning All Summer",
+        "text": "<p>Maximize your sun exposure and soak up that essential Vitamin D with our innovative tan-through bikini. Experience the glow of summer with a perfectly even, golden tan, free from unsightly tan lines.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_QyQjTn": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".feature-row__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/9273721_1918216.webp",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "Doubles as a Bodysuit",
+        "text": "<p>Enjoy lightweight, quick-drying comfort with our eco-friendly, breathable fabric. Made from Japan's exclusive, expertly crafted techno-fabric, it offers a tan-through effect comparable to SPF 8-15 and doubles as a chic bodysuit.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "advanced_content_WDtP4i": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_GKtare": {
+          "type": "liquid",
+          "settings": {
+            "code": "<style>\n  .comparison-table {\n    width: 100%;\n    border-collapse: collapse;\n    border-radius: 8px;\n    overflow: hidden;\n  }\n\n  .comparison-table th, .comparison-table td {\n    border: 1px solid #ddd;\n    padding: 10px;\n    text-align: center;\n  }\n\n  .comparison-table th {\n    background-color: #f2f2f2;\n  }\n\n  .comparison-table .aspect-column {\n    background-color: #fff;\n    text-align: left;\n  }\n\n  .comparison-table td:nth-child(n+2),\n  .comparison-table th:nth-child(n+2) {\n    border-left: none;\n  }\n<\/style>\n\n<h2 style=\"text-align: center;\"><strong>Why Us<\/strong><\/h2>\n\n<table class=\"comparison-table\">\n  <thead>\n    <tr>\n      <th>Aspect<\/th>\n      <th>Dianara<\/th>\n      <th>Others<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td class=\"aspect-column\">Snatches<\/td>\n      <td>✅<\/td>\n      <td>❌<\/td>\n    <\/tr>\n    <tr>\n      <td class=\"aspect-column\">Soft<\/td>\n      <td>✅<\/td>\n      <td>❌<\/td>\n    <\/tr>\n    <tr>\n      <td class=\"aspect-column\">Breathable<\/td>\n      <td>✅<\/td>\n      <td>❌<\/td>\n    <\/tr>\n    <tr>\n      <td class=\"aspect-column\">Price<\/td>\n      <td>$38<\/td>\n      <td>$70<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_GKtare"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "text_and_image_WkkqqT": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".feature-row__text {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Replacement_Testimonals_0a28d5c8-bb2f-42c8-91c6-bdfcf60a7715.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Customers Love Our Bodysuits",
+        "text": "<p>Explore our world of style and comfort, as celebrated by hundreds of thrilled customers.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "blocks": {
+        "lai_product_reviews_lai_product_section_dHy7tA": {
+          "type": "shopify:\/\/apps\/lai-product-reviews\/blocks\/lai-product-section\/cad3c6c6-329e-4416-ba74-b79359b5b6e1",
+          "settings": {
+            "lai_product": "",
+            "title": ""
+          }
+        },
+        "instafeed_app_block_hFKTVt": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "lai_product_reviews_lai_product_section_dHy7tA",
+        "instafeed_app_block_hFKTVt"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faq_3eTrjQ": {
+      "type": "faq",
+      "blocks": {
+        "question_Wd4DcB": {
+          "type": "question",
+          "settings": {
+            "title": "Will it give me 100% seamless tan?",
+            "text": "<p>Achieving a 100% seamless tan is quite challenging, even when you're not wearing anything due to natural sun exposure variations.<\/p><p>However, our swimwear provides about 75% more seamless coverage than standard bikini brands, significantly enhancing your chances of getting a more uniform tan.<\/p>"
+          }
+        },
+        "question_NHX4NL": {
+          "type": "question",
+          "settings": {
+            "title": "How long does it take to tan evenly?",
+            "text": "<p>Tanning varies from person to person because so many things affect it—like how strong the sun is, where you are, and even your own skin's nature.<\/p><p>That's why wearing our one piece as much as you can might help you get those even tan results you're looking for. It's all about maximizing your time in the sun safely!<\/p>"
+          }
+        },
+        "question_pd9xwa": {
+          "type": "question",
+          "settings": {
+            "title": "Is the fabric see-through?",
+            "text": "<p>Our bikinis are unlined to let the maximum amount of sunlight through, ensuring you get the best tan possible.<\/p><p>They've been tested to make sure they aren’t see-through, wet or dry.<\/p><p>Keep in mind, that some styles might show more than others, and if you’re concerned about sheerness, try sizing up—just know it might affect your tan a bit<\/p>"
+          }
+        },
+        "question_NKckyE": {
+          "type": "question",
+          "settings": {
+            "title": "Further questions?",
+            "text": "<p>Please visit our <a href=\"\/pages\/contact\" title=\"Contact Us\">Contact Us<\/a> page and fill out the form at the bottom of the page. Thank you!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_Wd4DcB",
+        "question_NHX4NL",
+        "question_pd9xwa",
+        "question_NKckyE"
+      ],
+      "custom_css": [
+        ".collapsible-content__inner {font-family: \"Work Sans\", sans-serif;}"
+      ],
+      "settings": {
+        "title": "Questions? We got you covered"
+      }
+    },
+    "1711674421c228b704": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_8BFDdp": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_8BFDdp"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 4
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 4
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_content_PDq9FT",
+    "testimonials",
+    "featured_collection_Cc4tV8",
+    "text_and_image_EmcK4m",
+    "text_and_image_QyQjTn",
+    "advanced_content_WDtP4i",
+    "text_and_image_WkkqqT",
+    "loox-product-reviews-app-section",
+    "faq_3eTrjQ",
+    "1711674421c228b704",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return",
+    "sub"
+  ]
+}

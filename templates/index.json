@@ -1,0 +1,257 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Summer 24",
+            "title_size": 50,
+            "subheading": "Find That Perfect Summer Look",
+            "link": "",
+            "link_text": "",
+            "link_2": "shopify:\/\/collections\/top-dresses",
+            "link_text_2": "Shop Now",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/2_3ad0b1eb-f3ff-45b4-a6c4-af3548939277.png",
+            "image_mobile": "shopify:\/\/shop_images\/2_3ad0b1eb-f3ff-45b4-a6c4-af3548939277.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "550px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Embrace Your Inner Goddess"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Our ethos is to adorn you in confidence and grace, transforming the every day into the realm of extraordinary style.<\/p>"
+          }
+        },
+        "button_zr9H6d": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/collections\/top-dresses",
+            "link_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button_zr9H6d"
+      ],
+      "custom_css": [
+        ".theme-block {margin-top: -10px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "featured_collections_amyhEF": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_rUU3zL": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-dresses",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_xhjyNV": {
+          "type": "collection",
+          "settings": {
+            "collection": "handbags",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_g6wggp": {
+          "type": "collection",
+          "settings": {
+            "collection": "skirts",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_7LWK8J": {
+          "type": "collection",
+          "settings": {
+            "collection": "tops",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_rUU3zL",
+        "collection_xhjyNV",
+        "collection_g6wggp",
+        "collection_7LWK8J"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "See Our Top Collections",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "slideshow_HgUcJb": {
+      "type": "slideshow",
+      "blocks": {
+        "image_R6WDRH": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Here's to You",
+            "title_size": 50,
+            "subheading": "Up to 30% off all products.",
+            "link": "shopify:\/\/collections",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/Snapinsta.app_447741180_1512731489321503_1178730194513770388_n_1080.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Snapinsta.app_447741180_1512731489321503_1178730194513770388_n_1080.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        }
+      },
+      "block_order": [
+        "image_R6WDRH"
+      ],
+      "settings": {
+        "section_height": "750px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "background_image_text_mJzKBV": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "Spring Sale",
+        "text": "<p><strong>Up to 60% off all products.<\/strong><\/p>",
+        "button_label": "Shop Now",
+        "button_link": "shopify:\/\/collections",
+        "image": "shopify:\/\/shop_images\/431864490_18421722826052190_3971431218895555363_n.jpg",
+        "focal_point": "center",
+        "layout": "right",
+        "height": 750,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "featured_collection_UHGWmT": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".image-wrap img {width: 100%; height: auto; object-fit: contain; display: block;}"
+      ],
+      "settings": {
+        "title": "Summer 2024 Best Sellers",
+        "home_featured_products": "summer-sale",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "text_and_image_haLaQ3": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pimg_e585af1045d08a0b28ed.webp",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Got Questions?",
+        "text": "<p>Don't worry if you have questions, comments, concerns, or just want to say hi. Then click the button below and fill out the form on the page. Happy shopping!<\/p>",
+        "button_label": "Contact Us",
+        "button_link": "shopify:\/\/pages\/contact",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "map_8TzeFA": {
+      "type": "map",
+      "settings": {
+        "map_title": "",
+        "address": "<h3><strong>Our retail store<\/strong><\/h3><p>Boston, United States<\/p><p>Mon - Fri, 8:30am - 10:30pm<br\/>Saturday, 8:30am - 10:30pm<br\/>Sunday, 8:30am - 10:30pm<\/p>",
+        "map_address": "",
+        "api_key": "",
+        "show_button": false,
+        "background_image": "shopify:\/\/shop_images\/boston-skyline-at-sunset-c-swapan-jha.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "1710813767f58998c2": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_XdMbTa": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size": 0,
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_XdMbTa"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "rich-text",
+    "featured_collections_amyhEF",
+    "slideshow_HgUcJb",
+    "background_image_text_mJzKBV",
+    "featured_collection_UHGWmT",
+    "text_and_image_haLaQ3",
+    "map_8TzeFA",
+    "1710813767f58998c2"
+  ]
+}
