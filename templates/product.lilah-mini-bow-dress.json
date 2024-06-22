@@ -93,13 +93,6 @@
             "surface_pickup_enable": true
           }
         },
-        "bundle_bear_offer_widget_eya7PT": {
-          "type": "shopify:\/\/apps\/bundle-bear\/blocks\/offer-widget\/8301eac6-7eb6-487c-92f6-ccde92f1db50",
-          "disabled": true,
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -153,7 +146,6 @@
         "inventory_status_JG4TE6",
         "39236fc6-a352-4de0-bc8b-d8b73c9ab83e",
         "buy_buttons",
-        "bundle_bear_offer_widget_eya7PT",
         "description",
         "custom_EV9dVA",
         "tab_tQqpmn",

@@ -105,12 +105,6 @@
             "surface_pickup_enable": true
           }
         },
-        "bundle_bear_offer_widget_g9EWxY": {
-          "type": "shopify:\/\/apps\/bundle-bear\/blocks\/offer-widget\/8301eac6-7eb6-487c-92f6-ccde92f1db50",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -165,7 +159,6 @@
         "custom_ntUgQG",
         "custom_VLHNby",
         "buy_buttons",
-        "bundle_bear_offer_widget_g9EWxY",
         "description",
         "custom_T7cJbB",
         "tab_tQqpmn",

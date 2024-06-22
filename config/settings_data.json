@@ -68,6 +68,9 @@
     "cart_additional_buttons": false,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
+    "cart_recommend_product": true,
+    "free-shipping-amount": 80,
+    "shipping_protection": "shipping-protection",
     "social_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=61557917888438",
     "social_instagram_link": "https:\/\/www.instagram.com\/shopdianara\/",
     "social_tiktok_link": "https:\/\/www.tiktok.com\/@shopdianara",
@@ -247,12 +250,6 @@
 
     ],
     "blocks": {
-      "14952540001915115444": {
-        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "13790739142488346433": {
         "type": "shopify:\/\/apps\/lai-product-reviews\/blocks\/appBlockEmbed\/cad3c6c6-329e-4416-ba74-b79359b5b6e1",
         "disabled": false,
@@ -277,12 +274,6 @@
         "settings": {
         }
       },
-      "15557474716127144420": {
-        "type": "shopify:\/\/apps\/kaching-bundles\/blocks\/app-embed-block\/6c637362-a106-4a32-94ac-94dcfd68cdb8",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "11724500921838622758": {
         "type": "shopify:\/\/apps\/frequently-bought\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
@@ -294,6 +285,12 @@
         "disabled": false,
         "settings": {
           "allowed_templates": ""
+        }
+      },
+      "14952540001915115444": {
+        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": true,
+        "settings": {
         }
       }
     }
