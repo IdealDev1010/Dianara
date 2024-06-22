@@ -17,13 +17,23 @@
     {%- render 'cart-item', product: item -%}
   {% endfor %}
 </div>
+
+<div class="recommend__product">
+  {% for item in cart.items %}
+    {% if forloop.first %}
+      {%- render 'recommend-product', item: item -%}
+    {% endif %}
+  {% endfor %}
+</div>
 <div class="cart__discounts cart__item-sub cart__item-row{% if cart.cart_level_discount_applications == blank %} hide{% endif %}">
   <div>{{ 'cart.general.discounts' | t }}</div>
   <div>
     {% for cart_discount in cart.cart_level_discount_applications %}
       <div class="cart__discount">
-        {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+        {{ cart_discount.title }} (-<span class="discount-total-amount">{{ cart_discount.total_allocated_amount | money }}</span>)
       </div>
+      <input type="hidden" value="{{ cart_discount.value }}" id="discount-value" />
+      <input type="hidden" value="{{ cart_discount.total_allocated_amount }}" id="discount-origin-value" />
     {% endfor %}
   </div>
 </div>

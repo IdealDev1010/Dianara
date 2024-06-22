@@ -1555,7 +1555,7 @@ lazySizesConfig.expFactor = 4;
       return fetch(url, {
         credentials: 'same-origin',
         method: 'GET'
-      }).then(response => response.json());
+      }).then(response => response.json())
     },
   
     getCartProductMarkup: function() {
@@ -1571,6 +1571,8 @@ lazySizesConfig.expFactor = 4;
     },
   
     changeItem: function(key, qty) {
+      console.log("Cart Key and qty==>", key);
+      console.log("Cart Key and qty==>", qty);
       return this._updateCart({
         url: ''.concat(theme.routes.cartChange, '?t=').concat(Date.now()),
         data: JSON.stringify({
@@ -1591,9 +1593,6 @@ lazySizesConfig.expFactor = 4;
         }
       })
       .then(response => response.json())
-      .then(function(cart) {
-        return cart;
-      });
     },
   
     updateAttribute: function(key, value) {
@@ -1637,15 +1636,16 @@ lazySizesConfig.expFactor = 4;
       products: '[data-products]',
       qtySelector: '.js-qty__wrapper',
       discounts: '[data-discounts]',
+      recommends:'[data-recommends]',
       savings: '[data-savings]',
       subTotal: '[data-subtotal]',
-  
+      removeItem: '.cart__remove',
       cartBubble: '.cart-link__bubble',
       cartNote: '[name="note"]',
       termsCheckbox: '.cart__terms-checkbox',
       checkoutBtn: '.cart__checkout'
     };
-  
+    var _this = this;
     var classes = {
       btnLoading: 'btn--loading'
     };
@@ -1665,13 +1665,14 @@ lazySizesConfig.expFactor = 4;
       this.namespace = '.cart-' + this.location;
       this.products = form.querySelector(selectors.products)
       this.submitBtn = form.querySelector(selectors.checkoutBtn);
-  
+      
       this.discounts = form.querySelector(selectors.discounts);
+      this.recommends = form.querySelector(selectors.recommends);
       this.savings = form.querySelector(selectors.savings);
       this.subtotal = form.querySelector(selectors.subTotal);
       this.termsCheckbox = form.querySelector(selectors.termsCheckbox);
       this.noteInput = form.querySelector(selectors.cartNote);
-  
+   
       if (this.termsCheckbox) {
         config.requiresTerms = true;
       }
@@ -1682,9 +1683,9 @@ lazySizesConfig.expFactor = 4;
     CartForm.prototype = Object.assign({}, CartForm.prototype, {
       init: function() {
         this.initQtySelectors();
-  
+       
         document.addEventListener('cart:quantity' + this.namespace, this.quantityChanged.bind(this));
-  
+        
         this.form.on('submit' + this.namespace, this.onSubmit.bind(this));
   
         if (this.noteInput) {
@@ -1727,7 +1728,8 @@ lazySizesConfig.expFactor = 4;
         var doc = parser.parseFromString(html, 'text/html');
         return {
           items: doc.querySelector('.cart__items'),
-          discounts: doc.querySelector('.cart__discounts')
+          discounts: doc.querySelector('.cart__discounts'),
+          recommends: doc.querySelector('.recommend__product')
         }
       },
   
@@ -1743,6 +1745,7 @@ lazySizesConfig.expFactor = 4;
         var savings = items.dataset.cartSavings;
   
         this.updateCartDiscounts(markup.discounts);
+        this.updateCartRecommends(markup.recommends);
         this.updateSavings(savings);
   
         if (count > 0) {
@@ -1767,6 +1770,24 @@ lazySizesConfig.expFactor = 4;
         if (Shopify && Shopify.StorefrontExpressButtons) {
           Shopify.StorefrontExpressButtons.initialize();
         }
+        var freeAmount = document.querySelector('.free-shipping-amount').value;
+        document.querySelector('.upcart-rewards-bar-foreground').style.width = Number(subtotal / freeAmount) + "%";
+        if(Number(subtotal / 100) > freeAmount ){
+          document.querySelector('.cart-rewards-successful--msg').classList.remove('hidden');
+          document.querySelector('.cart-rewards-progressing--msg').classList.add('hidden');
+        }
+        else {
+          document.querySelector('.cart-rewards-price').textContent = (freeAmount - Number(subtotal / 100)).toFixed(2) + "$";
+          document.querySelector('.cart-rewards-successful--msg').classList.add('hidden');
+          document.querySelector('.cart-rewards-progressing--msg').classList.remove('hidden');
+        }
+        document.querySelectorAll('.cart-drawer--remove__item').forEach(removeButton =>{
+          removeButton.addEventListener('click',function(){
+            let id = removeButton.dataset.id;
+            document.getElementById('cart_updates_' + id).value = 0;
+            document.getElementById('cart_updates_' + id).dispatchEvent(new CustomEvent('change'),{ bubbles: true } );
+          });
+        });
       },
   
       updateCartDiscounts: function(markup) {
@@ -1776,6 +1797,34 @@ lazySizesConfig.expFactor = 4;
         this.discounts.innerHTML = '';
         this.discounts.append(markup);
       },
+      
+      updateCartRecommends: function(markup) {
+        if (!this.recommends) {
+          return;
+        }
+        this.recommends.innerHTML = '';
+        this.recommends.append(markup);
+        // document.querySelector('.swiper-button-prev').innerHTML)
+        if(!document.querySelector('.custom-upsell-products').classList.contains('swiper-container-initialized')){
+          var galleryProductHybrid = new Swiper(`.custom-upsell-products`, {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              loop: true,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }
+          });
+
+          function handleFocus(e, i) {
+              galleryProductHybrid.slideTo(i);
+          }
+
+          const iconHybridSliders = document.querySelectorAll('.custom-upsell-products .swiper-slide');
+          iconHybridSliders.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+        }
+      },
+      
   
       /*============================================================================
         Quantity handling
@@ -1809,6 +1858,7 @@ lazySizesConfig.expFactor = 4;
               this.wrapper.classList.remove('is-empty');
             } else {
               this.wrapper.classList.add('is-empty');
+              
             }
   
             this.buildCart();
@@ -7904,5 +7954,4 @@ lazySizesConfig.expFactor = 4;
 
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
-
 })();

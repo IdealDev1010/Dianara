@@ -1,0 +1,174 @@
+
+{% if settings.cart_recommend_product %}
+    <script>
+        console.log("Product section has loaded!!!");
+    </script>
+      <div class="drawer__recommend-product-container container slider-column" data-key="{{ item.key }}" >
+        <h2 class="drawer__recommend-product--title">You might also need ...</h2>
+        <div class="custom-upsell-products swiper swiper-slider">
+          <div class="drawer__recommend-product swiper-wrapper">
+            {%- assign count = 0 -%}
+            {%- assign recommend_products = item.product.metafields.custom.upsell.value -%}
+            {%  if recommend_products %}
+                {% for recommend_item in recommend_products %}
+                  {% if count <= 2 %}
+                    <div class="recommend-product--wrapper swiper-slide">
+                      <div class="recommend-product--container">
+                        <div class="recommend-product--image">
+                          <div class="recommend-product--image__item">
+                            <a href="{{ recommend_item.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: recommend_item.image.aspect_ratio }}%;">
+                              <img class="lazyload"
+                                  src="{{ recommend_item | img_url: width:360 }}"
+                                  widths="[180, 360, 540]"
+                                  aspectratio="{{ recommend_item.aspect_ratio }}"
+                                  sizes="auto"
+                                  alt="{{ recommend_item.title | escape }}"> 
+                            </a>
+                          </div>
+                        </div>
+                        <div class="recommend-product--content">
+                          <div class="recommend-product--info">
+                            <p class="recommend-product--title">{{ recommend_item.title }}</p>
+                            <div class="recommend-product--price">
+                              {% if recommend_item.compare_at_price %}
+                                <p class="recommended-compare_price">{{ recommend_item.compare_at_price | money }}</p>
+                                <p class="recommended_price">{{ recommend_item.price | money }}</p>
+                                {% else %}
+                                <p class="recommended_price">{{ recommend_item.price | money }}</p>
+                              {% endif %}
+                            </div>
+                          </div>
+                          <cart-recommendations class="recommend-upsell--container " data-inline="true">
+                            <form method="post" action="/cart/add" class="recommend-upsell-wrapper product-single__form">
+                              {% assign current_variant = recommend_item.selected_or_first_available_variant %}
+                              <input type="hidden" name="id" value="{{ current_variant.id }}">
+                              <input type="hidden" name="quantity" value="1">
+                              {% if recommend_item.has_only_default_variant %}
+                                <div class="recommend-add-to-cart--btn">
+                                  <button
+                                    name="add"
+                                    type="submit"
+                                    data-add-to-cart
+                                    class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                                    {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+                                    <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                                      Add
+                                    </span>
+                                  </button>
+                                </div>
+                              {% else %}
+                                <div class="recommend-porduct-variant">
+                                  <select id="product-select-{{ forloop.index }}" class="recommend-select" name="id">
+                                    {% for variant in recommend_item.variants %}
+                                      {% if variant.available %}
+                                        <option {% if variant == current_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                                          {{ variant.title }}
+                                        </option>
+                                      {% endif %}
+                                    {% endfor %}
+                                  </select>
+                                </div>
+                                <div class="recommend-add-to-cart--btn">
+                                  <button
+                                    name="add"
+                                    type="submit"
+                                    data-add-to-cart
+                                    class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                                    {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+                                    <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                                      Add
+                                    </span>
+                                  </button>
+                                </div>
+                              {% endif %}
+                            </form>
+                          </cart-recommendations>
+                        </div>
+                      </div>
+                    </div>
+                    {%- assign count = count | plus: 1 -%}
+                  {% endif %}
+                {% endfor %}
+            {% else %}
+            <div class="recommend-product--wrapper swiper-slide">
+              <div class="recommend-product--container">
+                <div class="recommend-product--image">
+                  <div class="recommend-product--image__item">
+                    <a href="{{ recommend_item.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: recommend_item.image.aspect_ratio }}%;">
+                      <img class="lazyload"
+                          src="{{ recommend_item | img_url: width:360 }}"
+                          widths="[180, 360, 540]"
+                          aspectratio="{{ recommend_item.aspect_ratio }}"
+                          sizes="auto"
+                          alt="{{ recommend_item.title | escape }}"> 
+                    </a>
+                  </div>
+                </div>
+                <div class="recommend-product--content">
+                  <div class="recommend-product--info">
+                    <p class="recommend-product--title">{{ recommend_item.title }}</p>
+                    <div class="recommend-product--price">
+                      {% if recommend_item.compare_at_price %}
+                        <p class="recommended-compare_price">{{ recommend_item.compare_at_price | money }}</p>
+                        <p class="recommended_price">{{ recommend_item.price | money }}</p>
+                        {% else %}
+                        <p class="recommended_price">{{ recommend_item.price | money }}</p>
+                      {% endif %}
+                    </div>
+                  </div>
+                  <cart-recommendations class="recommend-upsell--container " data-inline="true">
+                    <form method="post" action="/cart/add" class="recommend-upsell-wrapper product-single__form">
+                      {% assign current_variant = recommend_item.selected_or_first_available_variant %}
+                      <input type="hidden" name="id" value="{{ current_variant.id }}">
+                      <input type="hidden" name="quantity" value="1">
+                      {% if recommend_item.has_only_default_variant %}
+                        <div class="recommend-add-to-cart--btn">
+                          <button
+                            name="add"
+                            type="submit"
+                            data-add-to-cart
+                            class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                            {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+                            <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                              Add
+                            </span>
+                          </button>
+                        </div>
+                      {% else %}
+                        <div class="recommend-porduct-variant">
+                          <select id="product-select-{{ forloop.index }}" class="recommend-select" name="id">
+                            {% for variant in recommend_item.variants %}
+                              {% if variant.available %}
+                                <option {% if variant == current_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                                  {{ variant.title }}
+                                </option>
+                              {% endif %}
+                            {% endfor %}
+                          </select>
+                        </div>
+                        <div class="recommend-add-to-cart--btn">
+                          <button
+                            name="add"
+                            type="submit"
+                            data-add-to-cart
+                            class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                            {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+                            <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                              Add
+                            </span>
+                          </button>
+                        </div>
+                      {% endif %}
+                    </form>
+                  </cart-recommendations>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  {% endif %}

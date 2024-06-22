@@ -1,87 +1,271 @@
-{%- if settings.cart_type == 'drawer' -%}
-  <div id="CartDrawer" class="drawer drawer--right">
-    <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents">
-      <div class="drawer__fixed-header">
-        <div class="drawer__header appear-animation appear-delay-1">
-          <div class="h2 drawer__title">{{ 'cart.general.title' | t }}</div>
-          <div class="drawer__close">
-            <button type="button" class="drawer__close-button js-drawer-close">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
-              <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
-            </button>
+  {%- if settings.cart_type == 'drawer' -%}
+    <div id="CartDrawer" class="drawer drawer--right">
+      <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents">
+        <div class="drawer__fixed-header">
+          <div class="drawer__header appear-animation appear-delay-1">
+            <div class="h2 drawer__title">{{ 'cart.general.title' | t }}</div>
+            <div class="drawer__close">
+              <button type="button" class="drawer__close-button js-drawer-close">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+                <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="drawer__inner">
-        <div class="drawer__scrollable">
-          <div data-products class="appear-animation appear-delay-2"></div>
-
-          {% if settings.cart_notes_enable %}
-            <div class="appear-animation appear-delay-3">
-              <label for="CartNoteDrawer">{{ 'cart.general.note' | t }}</label>
-              <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
+        <div class="drawer__inner">
+          <div class="drawer__scrollable">
+            <div class="drawer-header--bar">
+              <div class="cart-rewards-message">
+                <div class="cart-rewards-progressing--msg">You’re <span class="cart-rewards-price">$65</span> away from FREE shipping!</div>
+                <p class="cart-rewards-successful--msg hidden"><strong>🎉 Congrats! You've made a great choice!</strong></p>
+              </div>
+              <div class="cart-rewards-bar-background styles_Rewards__progressBar__nHWny">
+                <input type="hidden" value="{{ settings.free-shipping-amount }}" class="free-shipping-amount">
+                <div class="styles_Rewards__progressBar--progress__twb6x upcart-rewards-bar-foreground" style="background-color: #000; width: {{  cart.total_price | divided_by: settings.free-shipping-amount }}%; opacity: 0.7"></div>
+              </div>
             </div>
-          {% endif %}
-        </div>
+            <div data-products class="appear-animation appear-delay-2"></div>
 
-        <div class="drawer__footer appear-animation appear-delay-4">
-          <div data-discounts>
-            {% if cart.cart_level_discount_applications != blank %}
-              <div class="cart__discounts cart__item-sub cart__item-row">
-                <div>{{ 'cart.general.discounts' | t }}</div>
-                <div class="text-right">
-                  {% for cart_discount in cart.cart_level_discount_applications %}
-                    <div class="cart__discount">
-                      {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
-                    </div>
-                  {% endfor %}
+            {% if settings.cart_notes_enable %}
+              <div class="appear-animation appear-delay-3">
+                <label for="CartNoteDrawer">{{ 'cart.general.note' | t }}</label>
+                <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
+              </div>
+            {% endif %}
+            <div data-recommends></div>   
+          </div>
+
+         
+          <div class="drawer__footer appear-animation appear-delay-4">
+            {% if settings.shipping_protection %}
+              <div class="shipping-protection--product">
+                <div class="shipping-protection--product__image">
+                  <img class="lazyload"
+                    src="{{ settings.shipping_protection | img_url: width:360 }}"
+                    widths="[180, 360, 540]"
+                    aspectratio="{{ shipping_protection.aspect_ratio }}"
+                    sizes="auto"
+                    alt="{{shipping_protection.title | escape }}"> 
+                </div>
+                <div class="shipping-protection--product__content">
+                  <div class="shipping-protection--product__title-with-price">
+                    <p class="shipping-protection--product__title">{{ settings.shipping_protection.title}}</p>
+                    <div class="shipping-protection--product__price">{{ settings.shipping_protection.price | money }}</div>
+                  </div>
+                  <div class="shipping-protection--product__application">
+                    <p class="shipping-protection--product__description">Protect your order from damage, loss, or theft during shipping.</p>
+                    <label class="toggle-switch ">
+                      <input type="checkbox" id="product-discount">
+                      <div class="toggle-switch-background">
+                        <div class="toggle-switch-handle"></div>
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </div>
             {% endif %}
-          </div>
-
-          <div class="cart__item-sub cart__item-row">
-            <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
-            <div data-subtotal>{{ cart.total_price | money }}</div>
-          </div>
-
-          <div class="cart__item-row text-center">
-            <small>
-              {{ 'cart.general.shipping_at_checkout' | t }}<br />
-            </small>
-          </div>
-
-          {% if settings.cart_terms_conditions_enable %}
-            <div class="cart__item-row cart__terms">
-              <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
-              <label for="CartTermsDrawer">
-                {% if settings.cart_terms_conditions_page != blank %}
-                  {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
-                {% else %}
-                  {{ 'cart.general.terms' | t }}
-                {% endif %}
-              </label>
+            <div data-discounts>
+              {% if cart.cart_level_discount_applications != blank %}
+                <div class="cart__discounts cart__item-sub cart__item-row">
+                  <div>{{ 'cart.general.discounts' | t }}</div>
+                  <div class="text-right">
+                    {% for cart_discount in cart.cart_level_discount_applications %}
+                      <div class="cart__discount">
+                        {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
 
-          <div class="cart__checkout-wrapper">
-            <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
-              {{ 'cart.general.checkout' | t }}
-            </button>
+            {% comment %} <div class="cart__item-sub cart__item-row">
+              <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
+              <div data-subtotal>{{ cart.total_price | money }}</div>
+            </div> {% endcomment %}
 
-            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
-              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
+            <div class="cart__item-row text-center">
+              <small>
+                {{ 'cart.general.shipping_at_checkout' | t }}<br />
+              </small>
+            </div>
+
+            {% if settings.cart_terms_conditions_enable %}
+              <div class="cart__item-row cart__terms">
+                <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
+                <label for="CartTermsDrawer">
+                  {% if settings.cart_terms_conditions_page != blank %}
+                    {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
+                  {% else %}
+                    {{ 'cart.general.terms' | t }}
+                  {% endif %}
+                </label>
+              </div>
             {% endif %}
+
+            <div class="cart__checkout-wrapper">
+              <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
+                {{ 'cart.general.checkout' | t }}• 
+                <div data-subtotal>{{ cart.total_price | money }}</div>
+              </button>
+
+              {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+                <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
+              {% endif %}
+            </div>
+          </div>
+          <div id="bottomCartTry" class="bottom__cart_container">
+            <div class="bottom__cart_wrapper">
+              <div class="bottom__cart_icon_container">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" fill="#F6F6F7"></rect>
+                  <circle cx="19.5" cy="19.5" r="17" fill="#FBF2E9" stroke="#273644"></circle>
+                  <g clip-path="url(#clip0_164_37)">
+                   <path d="M19.8997 31.5284L19.887 31.525C17.1353 30.7898 14.9084 29.4429 13.2616 27.5306C11.615 25.6186 10.5528 23.1467 10.1216 20.1686L19.8997 31.5284ZM19.8997 31.5284H19.9126M19.8997 31.5284H19.9126M19.9126 31.5284C19.9125 31.5284 19.9154 31.5288 19.9288 31.5321L19.931 31.5327C19.9431 31.5357 19.9671 31.5418 19.9933 31.5418C20.0194 31.5418 20.0435 31.5357 20.0555 31.5327L20.0577 31.5321C20.071 31.5288 20.074 31.5284 20.074 31.5284H20.0868L20.0995 31.525C22.8579 30.7899 25.0848 29.4429 26.7317 27.5306C28.3783 25.6186 29.4404 23.1467 29.8784 20.1688L29.8784 20.1686C30.5101 15.8253 29.5984 11.9598 29.519 11.6233C29.5172 11.6156 29.5158 11.6097 29.5149 11.6057L29.515 11.6057L29.5136 11.6007C29.4811 11.487 29.3956 11.3568 29.2436 11.3174L20.1168 8.47622L20.1169 8.47607L20.1114 8.47469C20.0418 8.4573 19.9581 8.4573 19.8886 8.47469L19.8885 8.47453L19.8831 8.47622L10.7538 11.3182L10.7538 11.3181L10.7485 11.3201C10.6174 11.3692 10.51 11.4709 10.4729 11.6007L10.4728 11.6007M19.9126 31.5284L10.4728 11.6007M10.4728 11.6007L10.4716 11.6057M10.4728 11.6007L10.4716 11.6057M10.4716 11.6057C10.4709 11.609 10.4698 11.6136 10.4684 11.6195M10.4716 11.6057L10.4684 11.6195M10.4684 11.6195C10.3958 11.9296 9.48735 15.8082 10.1216 20.1685L10.4684 11.6195ZM12.347 19.9679L12.347 19.9682C12.7111 22.355 13.5279 24.3299 14.7898 25.8747C16.0508 27.4183 17.7518 28.527 19.8767 29.1893C19.922 29.2094 19.9656 29.2093 19.9895 29.2092L19.9933 29.2092C19.9954 29.2092 19.9977 29.2092 20 29.2092C20.0326 29.2093 20.0776 29.2095 20.1233 29.1893C22.2482 28.527 23.9459 27.4182 25.2035 25.8746C26.462 24.3299 27.2754 22.3551 27.6395 19.9686C27.9496 17.9867 27.9224 15.4694 27.5993 13.3824L27.5997 13.3824L27.5975 13.3735C27.5629 13.2354 27.4601 13.1149 27.3211 13.0628L27.3211 13.0627L27.3157 13.061L20.1168 10.8222L20.1169 10.8221L20.1114 10.8207C20.0418 10.8033 19.9581 10.8033 19.8886 10.8207L19.8885 10.8205L19.8831 10.8222L12.6843 13.061L12.6843 13.0609L12.6824 13.0616C12.5312 13.112 12.42 13.2335 12.4005 13.3834C12.064 15.4709 12.0506 17.9874 12.347 19.9679ZM23.3886 15.6839L23.3885 15.684L16.2039 19.8392C15.8449 20.0378 15.9909 20.5893 16.4005 20.5893C16.4714 20.5893 16.5403 20.5715 16.6061 20.5386L16.6062 20.5387L16.6114 20.5358L23.7968 16.3934L23.7968 16.3934L23.7983 16.3925C24.0238 16.2572 24.0311 16.0075 23.9362 15.8388C23.8885 15.754 23.8118 15.6813 23.7141 15.6469C23.6138 15.6116 23.4997 15.6198 23.3886 15.6839ZM16.2031 23.6067L16.2031 23.6067L16.2016 23.6076C15.8518 23.8175 15.9847 24.3563 16.4005 24.3563C16.4714 24.3563 16.5403 24.3385 16.6061 24.3056L16.6062 24.3057L16.6114 24.3028L23.7968 20.1604L23.7968 20.1604L23.7983 20.1595C23.906 20.0949 23.9679 20.0004 23.9873 19.8976C24.0064 19.7971 23.9839 19.6951 23.9357 19.6116C23.8875 19.5281 23.8103 19.4573 23.7126 19.4247C23.6125 19.3912 23.4991 19.4006 23.3886 19.4643L16.2031 23.6067ZM26.8387 19.8435L26.8385 19.8444C26.4987 22.0968 25.7634 23.9189 24.6241 25.3331C23.4911 26.7395 21.9536 27.7485 19.9933 28.3742C18.033 27.7485 16.4989 26.7396 15.3675 25.3331C14.2298 23.919 13.4946 22.0968 13.148 19.8442C12.871 18.0242 12.881 15.7178 13.1657 13.756L19.9933 11.6257L26.8342 13.756C27.1189 15.7178 27.1287 18.024 26.8387 19.8435ZM13.8356 26.9881C12.3187 25.2139 11.3428 22.9067 10.9227 20.0725C10.3748 16.3676 11.0261 12.9154 11.2174 12.0281L19.9933 9.2931L28.7825 12.0281C28.9732 12.9152 29.6121 16.3676 29.0772 20.0728C28.657 22.9069 27.6812 25.2139 26.1627 26.9881C24.6494 28.756 22.5921 30.0008 19.9933 30.7081C17.4013 30.0008 15.3472 28.7561 13.8356 26.9881Z" fill="#273644" stroke="#273644" stroke-width="0.2"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_164_37">
+                    <rect width="22.8571" height="22.8571" fill="white" transform="translate(8.57141 8.57144)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <span class="bottom__cart_text">
+                  30-Day Risk Free Trial
+              </span>
+            </div>
+            <div class="bottom__cart_wrapper">
+              <div class="bottom__cart_icon_container">
+                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.5" cy="19.5" r="17" fill="#FBF2E9" stroke="#273644"></circle>
+                  <g clip-path="url(#clip0_164_300)">
+                    <path d="M8.78571 12.7857V14.2857H23.0357V25.5357H18.4187C18.0842 24.2465 16.9247 23.2857 15.5357 23.2857C14.1467 23.2857 12.9872 24.2465 12.6527 25.5357H11.7857V21.7857H10.2857V27.0357H12.6527C12.9872 28.325 14.1467 29.2857 15.5357 29.2857C16.9247 29.2857 18.0842 28.325 18.4187 27.0357H24.6527C24.9872 28.325 26.1467 29.2857 27.5357 29.2857C28.9247 29.2857 30.0842 28.325 30.4187 27.0357H32.7857V20.9187L32.7385 20.801L31.2385 16.301L31.0757 15.7857H24.5357V12.7857H8.78571ZM9.53571 15.7857V17.2857H16.2857V15.7857H9.53571ZM24.5357 17.2857H29.9965L31.2857 21.1295V25.5357H30.4187C30.0842 24.2465 28.9247 23.2857 27.5357 23.2857C26.1467 23.2857 24.9872 24.2465 24.6527 25.5357H24.5357V17.2857ZM10.2857 18.7857V20.2857H14.7857V18.7857H10.2857ZM15.5357 24.7857C16.3735 24.7857 17.0357 25.448 17.0357 26.2857C17.0357 27.1235 16.3735 27.7857 15.5357 27.7857C14.698 27.7857 14.0357 27.1235 14.0357 26.2857C14.0357 25.448 14.698 24.7857 15.5357 24.7857ZM27.5357 24.7857C28.3735 24.7857 29.0357 25.448 29.0357 26.2857C29.0357 27.1235 28.3735 27.7857 27.5357 27.7857C26.698 27.7857 26.0357 27.1235 26.0357 26.2857C26.0357 25.448 26.698 24.7857 27.5357 24.7857Z" fill="#273644"></path>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_164_300">
+                    <rect width="24" height="24" fill="white" transform="translate(8.78571 8.28571)"></rect>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <span class="bottom__cart_text">
+                Fast and Free Shipping
+              </span>
+            </div>
+            <div class="bottom__cart_wrapper">
+              <div class="bottom__cart_icon_container">
+                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3.5" y="3.5" width="34" height="34" rx="17" fill="#B2FCE5"></rect>
+                  <path d="M29.9612 14.6373L27.0404 12.9658L24.0773 11.269C22.1188 10.1462 19.6707 11.556 19.6707 13.8184V14.1983C19.6707 14.4093 19.7804 14.6035 19.9662 14.7048L21.3422 15.4899C21.7221 15.7094 22.1948 15.4308 22.1948 14.9918V14.0885C22.1948 13.6411 22.676 13.3626 23.0643 13.582L25.7657 15.1353L28.4586 16.6802C28.8469 16.8997 28.8469 17.4653 28.4586 17.6847L25.7657 19.2296L23.0643 20.7829C22.676 21.0024 22.1948 20.7238 22.1948 20.2764V19.829C22.1948 17.5666 19.7467 16.1483 17.7882 17.2795L14.8336 18.9848L11.9127 20.6563C9.94577 21.7875 9.94577 24.6323 11.9127 25.7635L14.8336 27.435L17.7966 29.1318C19.7551 30.2546 22.2032 28.8448 22.2032 26.5824V26.2025C22.2032 25.9915 22.0935 25.7973 21.9078 25.696L20.5318 24.9109C20.1519 24.6914 19.6791 24.97 19.6791 25.409V26.3123C19.6791 26.7597 19.198 27.0382 18.8096 26.8188L16.1083 25.2655L13.4153 23.7206C13.027 23.5011 13.027 22.9355 13.4153 22.7161L16.1083 21.1712L18.8096 19.6179C19.198 19.3984 19.6791 19.677 19.6791 20.1244V20.5718C19.6791 22.8342 22.1273 24.2525 24.0858 23.1213L27.0488 21.4245L29.9697 19.753C31.9282 18.6133 31.9282 15.7685 29.9612 14.6373Z" fill="#273644"></path>
+                  <rect x="3.5" y="3.5" width="34" height="34" rx="17" stroke="#273644"></rect>
+              </svg>
+              </div>
+              <span class="bottom__cart_text">
+                Pay in Monthly Installments
+              </span>
+            </div>
+        </div>
+        </div>
+
+        <div class="drawer__cart-empty appear-animation appear-delay-2">
+          <div class="drawer__scrollable">
+            {{ 'cart.general.empty' | t }}
           </div>
         </div>
-      </div>
+      </form>
 
-      <div class="drawer__cart-empty appear-animation appear-delay-2">
-        <div class="drawer__scrollable">
-          {{ 'cart.general.empty' | t }}
+      {% comment %} {% if settings.cart_recommend_product %}
+        <div data-recommends>      
+          <div class="drawer__recommend-product-container ">
+            <h2 class="drawer__recommend-product--title">You might also need ...</h2>
+            <div class="swiper-container">
+              <div class="drawer__recommend-product swiper-wrapper">
+
+                {%- assign recommend_products = product.metafields.custom.upsell.value -%}
+                {% for recommend_item in recommend_products %}
+                  <div class="recommend-product--wrapper swiper-slide">
+                    <div class="recommend-product--container">
+                      <div class="recommend-product--image">
+                        <div class="recommend-product--image__item">
+                          <a href="{{ recommend_item.url }}" style="height: 0; padding-bottom: {{ 100 | divided_by: recommend_item.image.aspect_ratio }}%;">
+                            <img class="lazyload"
+                                src="{{ recommend_item | img_url: width:360 }}"
+                                widths="[180, 360, 540]"
+                                aspectratio="{{ recommend_item.aspect_ratio }}"
+                                sizes="auto"
+                                alt="{{ recommend_item.title | escape }}"> 
+                          </a>
+                        </div>
+                      </div>
+                      <div class="recommend-product--content">
+                        <div class="recommend-product--info">
+                          <p class="recommend-product--title">{{ recommend_item.title }}</p>
+                          <div class="recommend-product--price">
+                            {% if recommend_item.compare_at_price %}
+                              <p class="recommended-compare_price">{{ recommend_item.compare_at_price | money }}</p>
+                              <p class="recommended_price">{{ recommend_item.price | money }}</p>
+                              {% else %}
+                              <p class="recommended_price">{{ recommend_item.price | money }}</p>
+                            {% endif %}
+                          </div>
+                        </div>
+                        <cart-recommendations class="recommend-upsell--container " data-inline="true">
+                          <form method="post" action="/cart/add" class="recommend-upsell-wrapper product-single__form">
+                            {% assign current_variant = recommend_item.selected_or_first_available_variant %}
+                            <input type="hidden" name="id" value="{{ current_variant.id }}">
+                            <input type="hidden" name="quantity" value="1">
+                            {% if recommend_item.has_only_default_variant %}
+                              <div class="recommend-add-to-cart--btn">
+                                <button
+                                  name="add"
+                                  type="submit"
+                                  data-add-to-cart
+                                  class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                                  {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+                                  <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                                    Add
+                                  </span>
+                                </button>
+                              </div>
+                            {% else %}
+                              <div class="recommend-porduct-variant">
+                                <select id="product-select-{{ forloop.index }}" class="recommend-select" name="id">
+                                  {% for variant in recommend_item.variants %}
+                                    {% if variant.available %}
+                                      <option {% if variant == current_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                                        {{ variant.title }}
+                                      </option>
+                                    {% endif %}
+                                  {% endfor %}
+                                </select>
+                              </div>
+                              <div class="recommend-add-to-cart--btn">
+                                <button
+                                  name="add"
+                                  type="submit"
+                                  data-add-to-cart
+                                  class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                                  {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+                                  <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                                    Add
+                                  </span>
+                                </button>
+                              </div>
+                            {% endif %}
+                          </form>
+                        </cart-recommendations>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
-{%- endif -%}
+      {% endif %} {% endcomment %}
+    </div>
+  {%- endif -%}
+  
