@@ -35,7 +35,7 @@ class CartShippingproduct extends HTMLElement {
       this.shippingCheck = this.querySelector(".toggle-switch");
       this.checkButton = this.querySelector('[data-add-to-cart]');
       this.status = this.shippingCheck.querySelector('input');
-      console.log("hiiiiiii",this.checkButton)
+      
       this.status.addEventListener("change", this.switchCheckBox.bind(this));
     }
 
@@ -43,7 +43,7 @@ class CartShippingproduct extends HTMLElement {
         if (this.status.checked) {
             this.checkButton.click();
         }else {
-            document.querySelector('.cart-drawer--remove__item').click();
+            document.querySelector('.remove_protect_product .cart-drawer--remove__item').click();
         }
     }
 }

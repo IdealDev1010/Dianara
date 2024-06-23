@@ -259,10 +259,12 @@ justify-content: space-between;
   }
   
   .swiper-button-next, .swiper-rtl .swiper-button-pre {
-    right: -5px;
+    right: -2px;
+    top: 43%;
   }
   .swiper-button-prev, .swiper-rtl .swiper-button-next {
-    left: -5px;
+    left: -2px;
+    top: 43%;
   }
 
   .bottom__cart_container {
@@ -305,6 +307,15 @@ justify-content: space-between;
    .drawer__inner .cart__item-row.text-center {
     margin-bottom: 0 !important;
     padding-top: 20px;
+   }
+
+   [data-recommends]{
+    margin: -20px;
+    margin-top: 0px;
+   }
+   .custom-upsell-products {
+    padding: 20px;
+    padding-top: 0px;
    }
 
 @media (max-width: 769px) {
