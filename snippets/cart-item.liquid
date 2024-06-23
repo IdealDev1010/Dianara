@@ -1,4 +1,6 @@
-<div class="cart__item" data-key="{{ product.key }}">
+<div class="cart__item {% if product.product.id == settings.shipping_protection.id %}
+  hidden
+{% endif %} " data-key="{{ product.key }} ">
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   <div class="cart__image">
@@ -55,7 +57,9 @@
 
       </div>
      
-      <div class="cart__remove">
+      <div class="cart__remove {% if product.product.id == settings.shipping_protection.id %}
+        remove_protect_product
+       {% endif %} ">
         <span class="text-link cart-drawer--remove__item" data-id="{{ product.key }}">
           <svg fill="#8F8F8F" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
             width="15px" height="15px" viewBox="0 0 482.428 482.429"

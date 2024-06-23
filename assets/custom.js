@@ -18,7 +18,7 @@ recommendSelects.forEach(function(select){
     });
 });
 
-  class CartRecommendations extends HTMLElement {
+class CartRecommendations extends HTMLElement {
     constructor() {
       super();
       this.form = this.querySelector('form');
@@ -27,20 +27,44 @@ recommendSelects.forEach(function(select){
 }
 
 customElements.define('cart-recommendations', CartRecommendations);
-
-document.querySelector("#product-discount").addEventListener("click", () => {
-    const discountValue = parseInt(document.querySelector("#discount-value").value);
-    let protectPriceStr = document.querySelector(".shipping-protection--product__price").innerHTML;
-    let discountTotalAmount = document.querySelector("#discount-origin-value").value / 100;
-    
-    const protectPrice = parseInt(protectPriceStr.replace("$", ""));
-    const totalDiscontPrice = parseFloat(protectPrice / discountValue);
-
-    if (document.querySelector("#product-discount").checked) {
-        discountTotalAmount += totalDiscontPrice;
-        document.querySelector(".discount-total-amount").innerHTML = `$${Number(discountTotalAmount).toFixed(2)}`;
-    } else {
-        discountTotalAmount = document.querySelector("#discount-origin-value").value / 100;
-        document.querySelector(".discount-total-amount").innerHTML = `$${Number(discountTotalAmount).toFixed(2)}`;
+class CartShippingproduct extends HTMLElement {
+    constructor() {
+      super();
+      this.form = this.querySelector('form');
+      new theme.AjaxProduct(this.form);
+      this.shippingCheck = this.querySelector(".toggle-switch");
+      this.checkButton = this.querySelector('[data-add-to-cart]');
+      this.status = this.shippingCheck.querySelector('input');
+      console.log("hiiiiiii",this.checkButton)
+      this.status.addEventListener("change", this.switchCheckBox.bind(this));
     }
-});
+
+    switchCheckBox(e) {
+        if (this.status.checked) {
+            this.checkButton.click();
+        }else {
+            document.querySelector('.cart-drawer--remove__item').click();
+        }
+    }
+}
+
+customElements.define('cart-shiping', CartShippingproduct);
+
+// document.querySelector("#product-discount").addEventListener("click", () => {
+    
+
+//     const discountValue = parseInt(document.querySelector("#discount-value").value);
+//     let protectPriceStr = document.querySelector(".shipping-protection--product__price").innerHTML;
+//     let discountTotalAmount = document.querySelector("#discount-origin-value").value / 100;
+    
+//     const protectPrice = parseInt(protectPriceStr.replace("$", ""));
+//     const totalDiscontPrice = parseFloat(protectPrice / discountValue);
+
+//     if (document.querySelector("#product-discount").checked) {
+//         discountTotalAmount += totalDiscontPrice;
+//         document.querySelector(".discount-total-amount").innerHTML = `$${Number(discountTotalAmount).toFixed(2)}`;
+//     } else {
+//         discountTotalAmount = document.querySelector("#discount-origin-value").value / 100;
+//         document.querySelector(".discount-total-amount").innerHTML = `$${Number(discountTotalAmount).toFixed(2)}`;
+//     }
+// });

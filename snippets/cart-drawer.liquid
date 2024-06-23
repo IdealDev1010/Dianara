@@ -38,33 +38,8 @@
 
          
           <div class="drawer__footer appear-animation appear-delay-4">
-            {% if settings.shipping_protection %}
-              <div class="shipping-protection--product">
-                <div class="shipping-protection--product__image">
-                  <img class="lazyload"
-                    src="{{ settings.shipping_protection | img_url: width:360 }}"
-                    widths="[180, 360, 540]"
-                    aspectratio="{{ shipping_protection.aspect_ratio }}"
-                    sizes="auto"
-                    alt="{{shipping_protection.title | escape }}"> 
-                </div>
-                <div class="shipping-protection--product__content">
-                  <div class="shipping-protection--product__title-with-price">
-                    <p class="shipping-protection--product__title">{{ settings.shipping_protection.title}}</p>
-                    <div class="shipping-protection--product__price">{{ settings.shipping_protection.price | money }}</div>
-                  </div>
-                  <div class="shipping-protection--product__application">
-                    <p class="shipping-protection--product__description">Protect your order from damage, loss, or theft during shipping.</p>
-                    <label class="toggle-switch ">
-                      <input type="checkbox" id="product-discount">
-                      <div class="toggle-switch-background">
-                        <div class="toggle-switch-handle"></div>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            {% endif %}
+            <div shipping-product></div>
+        
             <div data-discounts>
               {% if cart.cart_level_discount_applications != blank %}
                 <div class="cart__discounts cart__item-sub cart__item-row">
@@ -85,12 +60,7 @@
               <div data-subtotal>{{ cart.total_price | money }}</div>
             </div> {% endcomment %}
 
-            <div class="cart__item-row text-center">
-              <small>
-                {{ 'cart.general.shipping_at_checkout' | t }}<br />
-              </small>
-            </div>
-
+            
             {% if settings.cart_terms_conditions_enable %}
               <div class="cart__item-row cart__terms">
                 <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
@@ -114,6 +84,12 @@
                 <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
               {% endif %}
             </div>
+            <div class="cart__item-row text-center">
+              <small>
+                {{ 'cart.general.shipping_at_checkout' | t }}<br />
+              </small>
+            </div>
+
           </div>
           <div id="bottomCartTry" class="bottom__cart_container">
             <div class="bottom__cart_wrapper">

@@ -15,7 +15,7 @@
   <link rel="dns-prefetch" href="https://maps.gstatic.com">
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
   
 
@@ -104,9 +104,9 @@
     <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
   {%- endif -%}
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    
 
   {%- if request.page_type contains 'customers/' -%}

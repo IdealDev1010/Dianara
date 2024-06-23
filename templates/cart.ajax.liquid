@@ -25,6 +25,9 @@
     {% endif %}
   {% endfor %}
 </div>
+<div class="shipping__product">
+   {% render 'shipping-product' %}
+</div>
 <div class="cart__discounts cart__item-sub cart__item-row{% if cart.cart_level_discount_applications == blank %} hide{% endif %}">
   <div>{{ 'cart.general.discounts' | t }}</div>
   <div>

@@ -1637,6 +1637,7 @@ lazySizesConfig.expFactor = 4;
       qtySelector: '.js-qty__wrapper',
       discounts: '[data-discounts]',
       recommends:'[data-recommends]',
+      shipping: '[shipping-product]',
       savings: '[data-savings]',
       subTotal: '[data-subtotal]',
       removeItem: '.cart__remove',
@@ -1665,7 +1666,7 @@ lazySizesConfig.expFactor = 4;
       this.namespace = '.cart-' + this.location;
       this.products = form.querySelector(selectors.products)
       this.submitBtn = form.querySelector(selectors.checkoutBtn);
-      
+      this.shipping = form.querySelector(selectors.shipping);
       this.discounts = form.querySelector(selectors.discounts);
       this.recommends = form.querySelector(selectors.recommends);
       this.savings = form.querySelector(selectors.savings);
@@ -1729,7 +1730,8 @@ lazySizesConfig.expFactor = 4;
         return {
           items: doc.querySelector('.cart__items'),
           discounts: doc.querySelector('.cart__discounts'),
-          recommends: doc.querySelector('.recommend__product')
+          recommends: doc.querySelector('.recommend__product'),
+          shipping: doc.querySelector('.shipping__product'),
         }
       },
   
@@ -1746,6 +1748,7 @@ lazySizesConfig.expFactor = 4;
   
         this.updateCartDiscounts(markup.discounts);
         this.updateCartRecommends(markup.recommends);
+        this.updateShippingProduct(markup.shipping);
         this.updateSavings(savings);
   
         if (count > 0) {
@@ -1796,6 +1799,14 @@ lazySizesConfig.expFactor = 4;
         }
         this.discounts.innerHTML = '';
         this.discounts.append(markup);
+
+      },
+      updateShippingProduct: function(markup) {
+        if (!this.shipping) {
+          return;
+        }
+        this.shipping.innerHTML = '';
+        this.shipping.append(markup);
       },
       
       updateCartRecommends: function(markup) {

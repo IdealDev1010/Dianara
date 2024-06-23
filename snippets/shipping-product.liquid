@@ -1,0 +1,96 @@
+{% if settings.shipping_protection %}
+    <div class="shipping-protection--product">
+      <div class="shipping-protection--product__image">
+        <img class="lazyload"
+          src="{{ settings.shipping_protection | img_url: width:360 }}"
+          widths="[180, 360, 540]"
+          aspectratio="{{ settings.shipping_protection.aspect_ratio }}"
+          sizes="auto"
+          alt="{{ settings.shipping_protection.title | escape }}"> 
+      </div>
+      <div class="shipping-protection--product__content">
+        <div class="shipping-protection--product__title-with-price">
+          <p class="shipping-protection--product__title">{{ settings.shipping_protection.title}}</p>
+          <div class="shipping-protection--product__price">{{ settings.shipping_protection.price | money }}</div>
+        </div>
+        <div class="shipping-protection--product__application">
+          <p class="shipping-protection--product__description">Protect your order from damage, loss, or theft during shipping.</p>
+          <cart-shiping class="cart-shipping-protection" data-inline="true">
+            <form method="post" action="/cart/add" class="shipping-product-wrapper product-single__form">
+                <input type="hidden" name="id" value="{{ settings.shipping_protection.selected_or_first_available_variant.id }}">
+                <input type="hidden" name="quantity" value="1">
+                <button
+                    name="add"
+                    type="submit"
+                    data-add-to-cart
+                    class="hidden btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and settings.shipping_protection.selling_plan_groups == empty %} btn--secondary{% endif %}"
+                    {% unless settings.shipping_protection.available %} disabled="disabled"{% endunless %}>
+                    <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+                      Add
+                    </span>
+                  </button>
+                <label class="toggle-switch">
+                {%- assign flag = false -%}
+                {%- for item in cart.items -%}
+                  {%- if item.product.id == settings.shipping_protection.id -%}
+                    {%- assign flag = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                    <input type="checkbox" id="product-discount" {%- if flag -%}
+                        checked
+                    {%- endif -%}>
+                    <div class="toggle-switch-background">
+                        <div class="toggle-switch-handle"></div>
+                    </div>
+                </label>
+            </form>
+          </cart-shiping>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+
+  {% comment %} <form method="post" action="/cart/add" class="recommend-upsell-wrapper product-single__form">
+    {% assign current_variant = recommend_item.selected_or_first_available_variant %}
+    <input type="hidden" name="id" value="{{ current_variant.id }}">
+    <input type="hidden" name="quantity" value="1">
+    {% if recommend_item.has_only_default_variant %}
+      <div class="recommend-add-to-cart--btn">
+        <button
+          name="add"
+          type="submit"
+          data-add-to-cart
+          class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+          {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+          <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+            Add
+          </span>
+        </button>
+      </div>
+    {% else %}
+      <div class="recommend-porduct-variant">
+        <select id="product-select-{{ forloop.index }}" class="recommend-select" name="id">
+          {% for variant in recommend_item.variants %}
+            {% if variant.available %}
+              <option {% if variant == current_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                {{ variant.title }}
+              </option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </div>
+      <div class="recommend-add-to-cart--btn">
+        <button
+          name="add"
+          type="submit"
+          data-add-to-cart
+          class="btn btn--full recommended-add-to-cart add-to-cart{% if enable_dynamic_buttons and recommend_item.selling_plan_groups == empty %} btn--secondary{% endif %}"
+          {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+          <span data-add-to-cart-text data-default-text="{{ 'products.product.add_to_cart' | t }}">
+            Add
+          </span>
+        </button>
+      </div>
+    {% endif %}
+  </form> {% endcomment %}
