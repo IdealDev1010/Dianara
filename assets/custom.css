@@ -1,6 +1,6 @@
 .drawer__contents .drawer__title {
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     text-transform: capitalize;
     font-weight: 900;
 }
@@ -318,13 +318,18 @@ justify-content: space-between;
     padding-top: 0px;
    }
 
+   .drawer__close-button {
+    padding-left: 0px;
+}
+
 @media (max-width: 769px) {
     .drawer__fixed-header .drawer__title {
-        font-size: 13px; 
+        font-size: 15px; 
     }
     
     .drawer__close-button {
         padding: 0 10px;
+        padding-left: 0px;
     }
 
     .shipping-protection--product__title-with-price {
