@@ -1773,7 +1773,7 @@ lazySizesConfig.expFactor = 4;
         if (Shopify && Shopify.StorefrontExpressButtons) {
           Shopify.StorefrontExpressButtons.initialize();
         }
-        var freeAmount = document.querySelector('.free-shipping-amount').value;
+        var freeAmount = document.querySelector('.free-shipping--amount').value;
         document.querySelector('.upcart-rewards-bar-foreground').style.width = Number(subtotal / freeAmount) + "%";
         if(Number(subtotal / 100) > freeAmount ){
           document.querySelector('.cart-rewards-successful--msg').classList.remove('hidden');
@@ -1785,7 +1785,7 @@ lazySizesConfig.expFactor = 4;
           document.querySelector('.cart-rewards-progressing--msg').classList.remove('hidden');
         }
         document.querySelectorAll('.cart-drawer--remove__item').forEach(removeButton =>{
-          removeButton.addEventListener('click',function(){
+          removeButton.addEventListener('click', function(){
             let id = removeButton.dataset.id;
             document.getElementById('cart_updates_' + id).value = 0;
             document.getElementById('cart_updates_' + id).dispatchEvent(new CustomEvent('change'),{ bubbles: true } );
@@ -1816,7 +1816,7 @@ lazySizesConfig.expFactor = 4;
         this.recommends.innerHTML = '';
         this.recommends.append(markup);
         // document.querySelector('.swiper-button-prev').innerHTML)
-        if(!document.querySelector('.custom-upsell-products').classList.contains('swiper-container-initialized')){
+        if(!document.querySelector('.custom-upsell-products')?.classList.contains('swiper-container-initialized')){
           var galleryProductHybrid = new Swiper(`.custom-upsell-products`, {
               slidesPerView: 1,
               spaceBetween: 30,

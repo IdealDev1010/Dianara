@@ -35,7 +35,6 @@ class CartShippingproduct extends HTMLElement {
       this.shippingCheck = this.querySelector(".toggle-switch");
       this.checkButton = this.querySelector('[data-add-to-cart]');
       this.status = this.shippingCheck.querySelector('input');
-      
       this.status.addEventListener("change", this.switchCheckBox.bind(this));
     }
 
@@ -50,21 +49,3 @@ class CartShippingproduct extends HTMLElement {
 
 customElements.define('cart-shiping', CartShippingproduct);
 
-// document.querySelector("#product-discount").addEventListener("click", () => {
-    
-
-//     const discountValue = parseInt(document.querySelector("#discount-value").value);
-//     let protectPriceStr = document.querySelector(".shipping-protection--product__price").innerHTML;
-//     let discountTotalAmount = document.querySelector("#discount-origin-value").value / 100;
-    
-//     const protectPrice = parseInt(protectPriceStr.replace("$", ""));
-//     const totalDiscontPrice = parseFloat(protectPrice / discountValue);
-
-//     if (document.querySelector("#product-discount").checked) {
-//         discountTotalAmount += totalDiscontPrice;
-//         document.querySelector(".discount-total-amount").innerHTML = `$${Number(discountTotalAmount).toFixed(2)}`;
-//     } else {
-//         discountTotalAmount = document.querySelector("#discount-origin-value").value / 100;
-//         document.querySelector(".discount-total-amount").innerHTML = `$${Number(discountTotalAmount).toFixed(2)}`;
-//     }
-// });

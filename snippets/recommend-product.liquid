@@ -1,11 +1,8 @@
 
 {% if settings.cart_recommend_product %}
-    <script>
-        console.log("Product section has loaded!!!");
-    </script>
       <div class="drawer__recommend-product-container container slider-column" data-key="{{ item.key }}" >
         <h2 class="drawer__recommend-product--title">Here's a little something extra</h2>
-        <div class="custom-upsell-products swiper swiper-slider">
+        <div class="custom-upsell-products swiper swiper-container">
           <div class="drawer__recommend-product swiper-wrapper">
             {%- assign count = 0 -%}
             {%- assign recommend_products = item.product.metafields.custom.upsell.value -%}
