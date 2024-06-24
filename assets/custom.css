@@ -162,6 +162,7 @@
 .cart__checkout {
     display: flex;
     justify-content: center;
+    
 }
 
 .shipping-protection--product__title-with-price {

@@ -120,7 +120,7 @@
       "discounts": "Discounts",
       "shipping_at_checkout": "Free Shipping on all orders $60+",
       "update": "Update cart",
-      "checkout": "Place Order",
+      "checkout": "Checkout",
       "empty": "Your cart is currently empty.",
       "continue_browsing_html": "<a href='{{ url }}'>Continue shopping<\/a>",
       "close_cart": "Close cart",
