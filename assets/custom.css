@@ -159,9 +159,10 @@
     gap: 10px;
 }
 
-.cart__checkout {
+.btn.cart__checkout {
     display: flex;
     justify-content: center;
+    letter-spacing: 3px;
     
 }
 
@@ -340,4 +341,8 @@ justify-content: space-between;
     .shipping-protection--product__title {
         font-size: 11px;
     }
+}
+
+[data-subtotal] {
+ padding-left: 7px;
 }
