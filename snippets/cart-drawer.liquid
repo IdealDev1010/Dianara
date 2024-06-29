@@ -39,8 +39,9 @@
 
          
           <div class="drawer__footer appear-animation appear-delay-4">
-            <div shipping-product></div>
-        
+            {% if settings.shipping_protection != null %}
+              <div shipping-product></div>
+            {% endif %}
             <div data-discounts>
               {% if cart.cart_level_discount_applications != blank %}
                 <div class="cart__discounts cart__item-sub cart__item-row">
@@ -86,13 +87,13 @@
               {% endif %}
             </div>
             <div class="cart__item-row text-center">
-              <small>
+              {% comment %} <small>
                 {{ 'cart.general.shipping_at_checkout' | t }}<br />
-              </small>
+              </small> {% endcomment %}
             </div>
 
           </div>
-          <div id="bottomCartTry" class="bottom__cart_container">
+          {% comment %} <div id="bottomCartTry" class="bottom__cart_container">
             <div class="bottom__cart_wrapper">
               <div class="bottom__cart_icon_container">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +167,7 @@
                 1000s of Satisfied Customers
               </span>
             </div>
-        </div>
+          </div> {% endcomment %}
         </div>
 
         <div class="drawer__cart-empty appear-animation appear-delay-2">

@@ -1814,26 +1814,48 @@ lazySizesConfig.expFactor = 4;
           return;
         }
         this.recommends.innerHTML = '';
+        console.log(markup, 'markup');
+       
         this.recommends.append(markup);
-        // document.querySelector('.swiper-button-prev').innerHTML)
-        if(!document.querySelector('.custom-upsell-products')?.classList.contains('swiper-container-initialized')){
-          var galleryProductHybrid = new Swiper(`.custom-upsell-products`, {
-              slidesPerView: 1,
-              spaceBetween: 30,
-              loop: true,
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+        fetch("/cart.js")
+        .then((response) => response.json())
+        .then((cart) => {
+          
+          cart.items.forEach(item => {
+            let currentId = item.id;
+            document.querySelector(`.recommend-product--wrapper[data-item-id="${currentId}"]`)?.remove();
+            if (document.querySelectorAll('.recommend-product--wrapper').length == 0 ) {
+              document.querySelector('.drawer__recommend-product--title').classList.add('hidden');
+            }
+            else{
+              document.querySelector('.drawer__recommend-product--title').classList.remove('hidden');
+            };
+
+            if(!document.querySelector('.custom-upsell-products')?.classList.contains('swiper-container-initialized' && document.querySelectorAll('.recommend-product--wrapper').length > 1)){
+              var galleryProductHybrid = new Swiper(`.custom-upsell-products`, {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                  loop: true,
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  }
+              });
+
+    
+              function handleFocus(e, i) {
+                  galleryProductHybrid.slideTo(i);
               }
-          });
-
-          function handleFocus(e, i) {
-              galleryProductHybrid.slideTo(i);
-          }
-
-          const iconHybridSliders = document.querySelectorAll('.custom-upsell-products .swiper-slide');
-          iconHybridSliders.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
-        }
+    
+              const iconHybridSliders = document.querySelectorAll('.custom-upsell-products .swiper-slide');
+              iconHybridSliders.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+            }
+          })
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+        // document.querySelector('.swiper-button-prev').innerHTML)
       },
       
   

@@ -324,6 +324,10 @@ justify-content: space-between;
     padding-left: 0px;
 }
 
+.cart__checkout-wrapper .cart__checkout {
+    font-size: 17px;
+}
+
 @media (max-width: 769px) {
     .drawer__fixed-header .drawer__title {
         font-size: 15px; 
@@ -345,4 +349,4 @@ justify-content: space-between;
 
 [data-subtotal] {
  padding-left: 7px;
-}
+} 

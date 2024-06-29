@@ -1,4 +1,4 @@
-<div class="cart__item {% if product.product.id == settings.shipping_protection.id %} hidden {% endif %}" data-key="{{ product.key }}">
+<div class="cart__item {% if product.product.id == settings.shipping_protection.id %} hidden {% endif %} {% if forloop.first %}first_item{% endif %}" data-key="{{ product.key }}" data-product-id="{{ product.product.id }}">
   {%- assign img_url = product | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   <div class="cart__image">

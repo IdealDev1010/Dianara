@@ -1,14 +1,15 @@
 
 {% if settings.cart_recommend_product %}
       <div class="drawer__recommend-product-container container slider-column" data-key="{{ item.key }}" >
-        <h2 class="drawer__recommend-product--title">Here's a little something extra</h2>
+        {%- assign recommend_products = item.product.metafields.custom.upsell.value -%}
+        <h2 class=" drawer__recommend-product--title">Here's a little something extra</h2>
         <div class="custom-upsell-products swiper swiper-container">
           <div class="drawer__recommend-product swiper-wrapper">
             {%- assign count = 0 -%}
             {%- assign recommend_products = item.product.metafields.custom.upsell.value -%}
                 {% for recommend_item in recommend_products %}
                   {% if count <= 2 %}
-                    <div class="recommend-product--wrapper swiper-slide">
+                    <div class="recommend-product--wrapper swiper-slide" data-item-id="{{ recommend_item.selected_or_first_available_variant.id }}">
                       <div class="recommend-product--container">
                         <div class="recommend-product--image">
                           <div class="recommend-product--image__item">
